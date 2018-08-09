@@ -1,27 +1,45 @@
 .single-manual-card {
-  min-height: 135px;
-  max-height: 135px;
-  box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
+  min-height: 400px;
+  max-height: 400px;
+  width: 450px;
+  box-shadow: 3px 3px 6px rgba(0,0,0, 0.3);
+  border-top: 1px solid rgba(0,0,0, 0.1);
+  border-left: 1px solid rgba(0,0,0, 0.1);
   color: black;
   padding: 10px;
-  margin: 10px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  text-align: right;
+  transition: border 0.05s, background 0.3s;
   
-  text-align: left;
-  transition: border 0.1s, background 0.5s;
+
+  border-radius: 4%;
+
   .manual-text {
     overflow: hidden;
   }
-  a, a:active, a:hover {
-    color: black;
+  h4{
+    text-align: left;
+  }
+  a{
+    color: green;
+    font-weight: 650;
+  } 
+  a:hover {
+    color: green;
+    font-size: 18px;
   }
   &:hover {
     cursor: pointer;
     background: white;
-    box-shadow: none;
-    border-radius: 1%;
+    box-shadow: 6px 6px 12px rgba(0,0,0, 0.3);
+    border-radius: 4%;
   }
 }
 
-.manual-content {
-  display: none;
+.manual-img {
+  /*display: none;*/
 }
+
+
+

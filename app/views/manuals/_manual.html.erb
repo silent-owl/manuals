@@ -2,14 +2,12 @@
   <div class="card">
     <div class="card-block">
       <h4 class="manual-text">
-        <%= truncate(manual.title, :length => 60) %>
+        <%= truncate(manual.title, :length => 60)%>
       </h4>
-      <div class="manual-content">
-        <div class="posted-by">Posted by <%= manual.user.name %></div>
-        <h3><%= manual.title %></h3> 
-        <p><%= manual.description %></p>
-        <%= link_to "Show", manual_path(manual.id), class: 'show_it_link' %>
+      <div class="manual-img" style="height: 330px;">
+        
       </div>
+      <%= link_to "Show", manual_path(manual.id), class: 'show_it_link' %>
     </div>
   </div>
 </div>
