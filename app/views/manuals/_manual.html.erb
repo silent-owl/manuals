@@ -1,0 +1,15 @@
+<div class="col-sm-5 single-manual-card" id=<%= manual_path(manual.id) %>>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="manual-text">
+        <%= truncate(manual.title, :length => 60) %>
+      </h4>
+      <div class="manual-content">
+        <div class="posted-by">Posted by <%= manual.user.name %></div>
+        <h3><%= manual.title %></h3> 
+        <p><%= manual.description %></p>
+        <%= link_to "Show", manual_path(manual.id), class: 'show_it_link' %>
+      </div>
+    </div>
+  </div>
+</div>
