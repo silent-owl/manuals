@@ -1,0 +1,2 @@
+class ManualCategory < ApplicationRecord
+end
