@@ -2,11 +2,24 @@
   .pc-menu {
     display: none !important;
   }
-  
+  .login-sec{
+  border-right: none !important;
+  border-bottom: 2px solid #92BB81FF;
+  }
+  .container-log{
+    box-shadow:0px 10px 0px rgba(0,0,0,0.1);
+   }
 }
 
 @media only screen and (min-width:700px) and (max-width: 1000px) {
   .container {
      width: 100% !important;
   }
+  .login-sec{
+  border-right: none !important;
+  border-bottom: 2px solid #92BB81FF;
+  }
+  .container-log{
+    box-shadow:0px 10px 0px rgba(0,0,0,0.1);
+   }
 }
