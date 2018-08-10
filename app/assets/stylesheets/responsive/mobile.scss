@@ -1,13 +1,11 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
   .pc-menu {
     display: none !important;
   }
-  #side-menu {
-    display: none !important;
-  }
+  
 }
 
-@media only screen and (min-width:767px) and (max-width: 1000px) {
+@media only screen and (min-width:700px) and (max-width: 1000px) {
   .container {
      width: 100% !important;
   }

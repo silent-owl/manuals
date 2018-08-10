@@ -1,10 +1,10 @@
-<div class="col-sm-5 single-manual-card" id=<%= manual_path(manual.id) %>>
-  <div class="card">
+<div class="col-sm-12" style="padding-left: 20px; padding-right: 20px;" id=<%= manual_path(manual.id) %>>
+  <div class="card single-manual-card" style="background-color: #fff;">
     <div class="card-block">
       <h4 class="manual-text">
-        <%= truncate(manual.title, :length => 60)%>
+        <%= truncate(manual.title, :length => 150)%>
       </h4>
-      <div class="manual-img" style="height: 330px;">
+      <div class="manual-img" style="height: 400px;">
         
       </div>
       <%= link_to "Show", manual_path(manual.id), class: 'show_it_link' %>
