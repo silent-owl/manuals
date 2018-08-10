@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   	get 'login', to: 'devise/sessions#new'
   	get 'signup', to: 'devise/registrations#new'
   end
-  resources :manuals do
 
+  
+  resources :manuals do
+  	collection do
+  		# get 'crafts'
+  	end
   end
 end
 
 
-# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.

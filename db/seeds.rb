@@ -20,46 +20,24 @@ def seed_users
 end
 
 def seed_categories
-  default_categories = ['Arts', 'Crafts', 'Sports', 'Sciences', 'Collecting',
-   'Reading','Study', 'Development', 'Arts and Hobby','Arts and Humanities',
-    'Physical Science and Engineering', 'Math and Logic',
-    'Computer Science', 'Data Science', 'Economics and Finance', 'Business',
-    'Social Sciences', 'Language', 'Other']
-  
-
+  default_categories = ['Arts', 'Crafts', 'Sports', 'Sciences','Development', 'Data Science', 'Business', 'Language', 'Other']
   default_categories.each do |name|
     Category.create(name: name)
   end
-
-  
 end
 
 def seed_manuals
-    5.times do
+    10.times do
       Manual.create(
         title: Faker::Lorem.sentences[0], 
         description: Faker::Lorem.sentences[0], 
-        user_id: rand(1..9)
+        user_id: rand(1..9),
+        category_id: rand(1..8)
       )
     end
 end
 
 
-
-def seed_manual_categories
-	manuals = Manual.all
-
-	manuals.each do |manual|
-		rand(1..4).times do
-			ManualCategory.create(
-				manual_id: rand(1..4),
-				category_id: rand(1..15)
-				)
-		end
-	end
-end
-
 # seed_users
 # seed_categories
 # seed_manuals
-# seed_manual_categories
