@@ -27,12 +27,13 @@ def seed_categories
 end
 
 def seed_manuals
-    10.times do
+    15.times do
       Manual.create(
         title: Faker::Lorem.sentences[0], 
         description: Faker::Lorem.sentences[0], 
         user_id: rand(1..9),
-        category_id: rand(1..8)
+        category_id: rand(1..8),
+        img_url: "https://pp.userapi.com/c849236/v849236504/4b7bb/IQIQwnnhuF0.jpg"
       )
     end
 end
@@ -40,4 +41,4 @@ end
 
 # seed_users
 # seed_categories
-# seed_manuals
+#seed_manuals

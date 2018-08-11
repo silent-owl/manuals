@@ -1,9 +1,15 @@
-<div id="single-manual-content" class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+<div id="single-manual-content" class="container single-manual-content">
+  <div class="row" style="background-color: white;">
+    <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
       <div class="posted-by">Posted by <%= @manual.user.name %></div>
       <h3><%= @manual.title %></h3>
-      <p><%= @manual.description %></p>
+      <hr>
+      <p><%= @manual.description*55 %></p>
+      <hr>
+      <div class="manual-img" style="max-height: 600px; margin-bottom: 5px;">
+        <%= link_to image_tag @manual.img_url, class: 'img-responsive single-manual_img', :alt => "ManualImage" %>
+      </div>
+    </div>
     </div>
   </div><!-- row -->
 </div>
