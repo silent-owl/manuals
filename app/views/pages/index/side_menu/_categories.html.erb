@@ -1,0 +1,6 @@
+<% @categories.each do |category| %>
+	<li class="category-item">
+	  <%= link_to category.name, send("root_path", category: category.name), :class => ("selected-item" if params[:category] == category.name) %>
+	</li>  
+<% end %>
+

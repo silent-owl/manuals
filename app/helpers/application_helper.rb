@@ -1,4 +1,4 @@
 require 'nav_helper.rb'
 module ApplicationHelper
-	include NavHelper
+  include NavHelper
 end

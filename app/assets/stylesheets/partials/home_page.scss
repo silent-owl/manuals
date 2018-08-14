@@ -1,8 +1,8 @@
 #main-content {
-  background: white;
+  background-color: #92BB81FF; 
+  padding: 20px 0 20px;
   min-height: 800px;
   margin: 0;
-  padding: 20px 0 0 0;
 }
 
 #side-menu {
@@ -27,10 +27,22 @@
     }
     li:hover {
       border-radius: 50px;
-      background: $navbarColor;
+      background: #5DB15A;
     }
     li:hover a, li:hover i {
       color: white;
     }
+    .selected-item{
+      color: white;
+      border-radius: 50px;
+      background: $navbarColor;
+    }
+  }
+  hr{
+
+    border-top-color: #047000; 
+    border-width: 2px; 
+    border-radius: 10px; 
+    width: 90%; 
   }
 }
