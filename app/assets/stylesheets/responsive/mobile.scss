@@ -9,6 +9,15 @@
   .container-log{
     box-shadow:0px 10px 0px rgba(0,0,0,0.1);
    }
+  .new-manual-button-parent {
+    text-align: center;
+    span {
+      display: none !important;
+    }
+  }
+  .manual-button {
+    padding-top:5px;
+  }
 }
 
 @media only screen and (min-width:700px) and (max-width: 1000px) {

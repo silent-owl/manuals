@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_10_114822) do
+ActiveRecord::Schema.define(version: 2018_08_15_132057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_114822) do
 
   create_table "manuals", force: :cascade do |t|
     t.string "title", default: "", null: false
-    t.text "img_url", default: "", null: false
+    t.text "img_url", default: "https://pp.userapi.com/c849236/v849236504/4b7bb/IQIQwnnhuF0.jpg", null: false
     t.text "description", default: "", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false

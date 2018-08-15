@@ -27,7 +27,7 @@ def seed_categories
 end
 
 def seed_manuals
-    15.times do
+    20.times do
       Manual.create(
         title: Faker::Lorem.sentences[0], 
         description: Faker::Lorem.sentences[0], 
@@ -41,4 +41,4 @@ end
 
 # seed_users
 # seed_categories
-#seed_manuals
+seed_manuals

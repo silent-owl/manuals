@@ -1,0 +1,21 @@
+.new-manual {
+  height: calc(100vh - 50px);
+  background-color: white;
+  h1 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  input, textarea, select {
+    width: 100%;
+    border: 1px solid $navbarColor;
+
+  }
+  select:hover, textarea:hover, input:hover{
+  	box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  }
+  select:focus, textarea:focus, input:focus{
+  	border: 2px solid $navbarColor	
+  }
+  
+  
+}

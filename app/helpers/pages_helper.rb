@@ -9,7 +9,7 @@ module PagesHelper
   end
 
   def no_manuals_partial_path
-    @manuals.empty? ? 'pages/index/no_manuals' : 'shared/empty_partial'
+    @manuals.empty? ? 'shared/no_manuals' : 'shared/empty_partial'
   end
 
   def category_field_partial_path
@@ -27,4 +27,13 @@ module PagesHelper
       'pages/index/create_new_manual/not_signed_in'
     end
   end
+
+  def update_pagination_partial_path
+    if @manuals.next_page
+      'pages/manuals_pagination_page/update_pagination'
+    else
+      'pages/manuals_pagination_page/remove_pagination'
+    end
+  end
+
 end

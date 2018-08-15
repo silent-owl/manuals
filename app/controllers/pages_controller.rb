@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def index
     manuals_for_category(params[:action])
   end 
+  
   def get_manuals
-    Manual.limit(10)
     search = params[:search]
     category = params[:category]
     if category.blank? && search.blank?
@@ -15,12 +15,17 @@ class PagesController < ApplicationController
     elsif category.present? && search.present?
       manuals = Manual.by_category(category).search(search)
     else
+
     end
   end
 
   private
     def manuals_for_category(category)
       @categories = Category.all
-      @manuals = get_manuals.paginate(page: params[:page])
+      @manuals = get_manuals.paginate(page: params[:page]).limit(10)
+      respond_to do |format|
+        format.html
+        format.js { render partial: 'pages/manuals_pagination_page' }
+      end
     end
 end
