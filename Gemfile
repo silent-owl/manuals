@@ -20,6 +20,8 @@ gem 'bcrypt',         '3.1.12'
 gem 'devise'
 gem 'bootstrap_form'
 gem 'faker'
+gem 'omniauth'
+gem 'omniauth-vkontakte'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
