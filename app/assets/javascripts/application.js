@@ -18,4 +18,5 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require users/index
+//= require pages/index
 
