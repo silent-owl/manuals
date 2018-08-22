@@ -4,7 +4,12 @@
   float:left;
   width:100%;
   padding: 50px 0px 75px 0px;
-  height: 1000px;
+  .h4-profile{
+  font-size: 16px;
+  }
+  .h4-profile-field{
+  font-weight: 650;
+  }
 }
 
 .container-profile{
@@ -28,7 +33,7 @@
 .profile-sec{
   border-top: 2px solid #047000;
   border-bottom: 2px solid #047000;
-  min-height: 200px;
+  min-height: 350px;
 }
 .manual-row{
   font-size: 16px;
@@ -36,14 +41,14 @@
 .manual-row:hover{
   background-color: #5DB15A;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .profile-manual-header{
-  border-top: 1px solid #047000; 
-  border-bottom: 1px solid #047000; 
+  
   h4{
     color: #047000;
   }  
 }
+
 
