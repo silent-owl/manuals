@@ -1,0 +1,49 @@
+.profile-block{
+  border-radius:3px; 
+  background: #92BB81FF;  
+  float:left;
+  width:100%;
+  padding: 50px 0px 75px 0px;
+  height: 1000px;
+}
+
+.container-profile{
+  background:#fff;
+  border-radius: 10px;
+  box-shadow:15px 20px 0px rgba(0,0,0,0.1);
+  padding-bottom: 50px;
+  h2 {
+  font-weight:650;
+  font-size: 27px;
+  color: #047000;
+  }
+  h3{
+   color: #047000; 
+  }
+  hr{
+  border-width: 1px;
+  border-color: #047000;
+  }
+}
+.profile-sec{
+  border-top: 2px solid #047000;
+  border-bottom: 2px solid #047000;
+  min-height: 200px;
+}
+.manual-row{
+  font-size: 16px;
+}
+.manual-row:hover{
+  background-color: #5DB15A;
+  color: white;
+  font-size: 20px;
+}
+
+.profile-manual-header{
+  border-top: 1px solid #047000; 
+  border-bottom: 1px solid #047000; 
+  h4{
+    color: #047000;
+  }  
+}
+

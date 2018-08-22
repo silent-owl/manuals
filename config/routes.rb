@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   	get 'signup', to: 'devise/registrations#new'
   end
 
+  resources :users, :only => [:show, :index]
   
   resources :manuals do
   	collection do

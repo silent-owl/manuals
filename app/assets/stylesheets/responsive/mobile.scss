@@ -18,9 +18,12 @@
   .manual-button {
     padding-top:5px;
   }
+  #profile-info{
+    border-bottom: none;
+  }
 }
 
-@media only screen and (min-width:700px) and (max-width: 1000px) {
+@media only screen and (min-width:700px) and (max-width: 991px) {
   .container {
      width: 100% !important;
   }
@@ -30,5 +33,8 @@
   }
   .container-log{
     box-shadow:0px 10px 0px rgba(0,0,0,0.1);
-   }
+  }
+  #profile-info{
+    border-bottom: none;
+  }
 }

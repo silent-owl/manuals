@@ -1,0 +1,62 @@
+
+<section class="profile-block">
+  <div class="container container-profile" style="margin-top: 4%;">
+    <div class="row">
+    	<h2 class="text-center"> Profile </h2>
+    	<div class="col-md-6 profile-sec" id="profile-info">
+    		<h3 class="text-center"> Info </h3>
+    		<hr>
+    		<div class="row">
+    			<div class="col-md-6 col-sm-6 col-xs-4">
+    				<h4> Name: </h4>
+    			</div>
+	    		<div class="col-md-6 col-sm-6 col-xs-8">
+	    			<h4> <%= @user.name %> </h4>
+	    		</div>	
+    		</div>
+    		<div class="row">
+    			<div class="col-md-6 col-sm-6 col-xs-4">
+    				<h4> Surname: </h4>	
+    			</div>
+	    		<div class="col-md-6 col-sm-6 col-xs-8">
+	    			<h4> <%= @user.surname %> </h4>
+	    		</div>	
+    		</div>
+    	</div>
+    	<div class="col-md-6 profile-sec">
+    		<h3 class="text-center"> Achievements </h3>
+    		<hr>
+    	</div>
+			
+     </div>
+     <div class="row" style="margin-top: 2%;">
+     	<h3 class="text-center"> Manuals </h3>
+     	<div class="col-sm-12 col-xs-12 col-md-12 text-center profile-manual-header">
+     		<div class="col-md-2 col-sm-2 col-xs-2">
+    			<h4> № </h4>
+    		</div>	
+    		<div class="col-md-6 col-sm-6 col-xs-6">
+    			<h4> Title </h4>
+    		</div>	
+    		<div class="col-md-4 col-sm-4 col-xs-4">
+    			<h4> Updated </h4>
+    		</div>	
+     	</div>
+     	<% @user.manuals.each_with_index do |manual, index| %> 
+	     	<div class="manual-row col-sm-12 col-xs-12 col-md-12 text-center" onclick="window.location.href='<%= manual_path(manual.id) %>'">
+	     		<div class="col-md-2 col-sm-2 col-xs-2">
+	    			<%= index + 1 %>
+	    		</div>	
+	    		<div class="col-md-6 col-sm-6 col-xs-6">
+	    			<%= manual.title %>
+	    		</div>	
+	    		<div class="col-md-4 col-sm-4 col-xs-4">
+	    			<%= manual.updated_at.strftime("%d.%m.%y, %H:%M") %>
+	    		</div>	
+	     	</div>
+     	<% end %> 
+     </div>
+     <hr>
+  </div> 
+</section>
+

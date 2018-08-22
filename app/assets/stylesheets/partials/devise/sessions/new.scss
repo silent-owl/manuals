@@ -2,9 +2,6 @@
 .login-block{
 	border-radius:3px; 
     background: #92BB81FF;  
-    /*
-    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  
-    background: linear-gradient(to bottom, #FFB88C, #DE6262); */
     float:left;
     width:100%;
     padding: 50px 0px 75px 0px;
@@ -28,11 +25,7 @@
     padding: 50px 30px; 
     position:relative;
     border-right: 2px solid #92BB81FF;
-    -webkit-border-image: 
-      -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
-    -moz-border-image: -moz-linear-gradient(to bottom, #FFB88C, #DE6262);
-	  -webkit-border-image: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
-	  
+    
 }
 .login-sec .copy-text{
     position:absolute;
