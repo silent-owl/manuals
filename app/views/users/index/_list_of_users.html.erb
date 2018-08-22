@@ -1,0 +1,16 @@
+<% @users.each do |user| %>
+    <tr>
+         <td>
+            <%= check_box_tag "user_check", user.id, false, class: 'checkbox checkbox_user' %>
+        </td>
+        <td>
+            <%= user.name + " " + user.surname %> 
+        </td>
+        <td>
+            <%= user.email %> 
+        </td>
+        <td>
+            <%= user.role %> 
+        </td>
+    </tr>
+<% end %>  

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
 
   resources :users, :only => [:show, :index]
+  delete 'users/delete_users', :as => :delete_users
+  post 'users/ban_users', :as => :ban_users
+  post 'users/default_users', :as => :default_users
+  post 'users/admin_to_users', :as => :admin_to_users
   
   resources :manuals do
   	collection do

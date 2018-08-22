@@ -1,7 +1,7 @@
 
 .single-manual-card {
   min-height: 250px;
-  max-height: 900px;
+  max-height: 950px;
   box-shadow: 3px 3px 6px rgba(0,0,0, 0.3);
   border-top: 1px solid rgba(0,0,0, 0.1);
   border-left: 1px solid rgba(0,0,0, 0.1);
@@ -38,8 +38,8 @@
 }
 
 .show_it_link{
-  margin-top: 5px;
-  padding: 5px;
+  margin-top: 25px;
+  padding: 8px;
   /*bottom: 0;*/
   border: 2px solid #00b300;
   border-radius: 10px;
@@ -49,6 +49,8 @@
 }
 .manual-img {
   padding-bottom: 5px;
+  max-height: 600px; 
+  margin-bottom: 10px;
 }
 .img_m {
   /*border: 2px solid green;*/

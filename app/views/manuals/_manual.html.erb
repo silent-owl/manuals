@@ -1,4 +1,4 @@
-<div class="col-sm-12" style="padding: 0 20px 0;" id=<%= manual_path(manual.id) %>>
+<div class="col-sm-12" style="padding: 0 20px 0;" onclick="window.location.href='<%= manual_path(manual.id) %>'">
   <div class="card single-manual-card" style="background-color: #fff;">
     
     <div class="card-block">
@@ -7,11 +7,10 @@
         <%=link_to truncate(manual.title , :length => 150),manual_path(manual.id), class: "manual_title_a" %>
         <!-- <%= truncate(manual.title , :length => 150)%> -->
       </h4>
-      <div class="manual-img" style="max-height: 600px; margin-bottom: 5px;">
+      <div class="manual-img">
         <%= link_to image_tag manual.img_url, class: 'img-responsive img_m', :alt => "ManualImage" %>
       </div>
-      <%= link_to "Show", manual_path(manual.id), class: 'show_it_link' %>
+      <%= link_to "Show manual", manual_path(manual.id), class: 'show_it_link' %>
     </div>
-
   </div>
 </div>

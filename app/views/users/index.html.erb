@@ -1,0 +1,48 @@
+
+<section class="users-block">
+  <div class="container container-users" style="margin-top: 4%;">
+    <div class="row">
+        <h2 class="text-center"> Users </h2>
+        <div class="col-md-12 users-sec">
+            <form name="MainForm">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group" style="padding: 2px; margin-bottom: 5px;">            
+                        <%= link_to "", {action: :ban_users}, method: :post, remote: true, :class=>'btn btn-lg btn-dark fas fa-lock f-icon-color', id: 'ban' %>
+                        <%= link_to "", {action: :default_users}, method: :post, remote: true, :class=>'btn btn-lg btn-dark fas fa-user f-icon-color', id: 'default_users' %>
+                        <%= link_to "", {action: :admin_to_users}, method: :post, remote: true, :class=>'btn btn-lg btn-dark fas fa-user-secret f-icon-color', id: 'admin' %>
+                        <%= link_to "", {action: :delete_users},method: :delete, remote: true, :class=>'btn btn-lg btn-dark fas fa-trash-alt f-icon-color', id: 'trash' %>
+                    </div>
+                </div>
+                <table class="table users_table">
+                    <thead>
+                        <tr>
+                        <th>
+                            <input type="checkbox" class="checkbox" id="checkBoxAll">
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th class="center">
+                            <strong>Role</strong>
+                        </th>
+                    </tr>
+               
+                    </thead>
+                    <tbody>
+                        <%= render "users/index/list_of_users" %>    
+                    </tbody>
+                    
+                </table>
+
+                <div id="show_ch_users" style=" padding-bottom: 10px;"><b>Ammount of chousen users: <span style="color:green; font-size: 20px;" id="users_choise"></span></b></div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="assets/users/index"></script>
