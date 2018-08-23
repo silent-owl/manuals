@@ -1,21 +1,72 @@
-.new-manual {
-  height: calc(100vh - 50px);
-  background-color: white;
-  h1 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  input, textarea, select {
-    width: 100%;
-    border: 1px solid $navbarColor;
 
-  }
-  select:hover, textarea:hover, input:hover{
-  	box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-  }
-  select:focus, textarea:focus, input:focus{
-  	border: 2px solid $navbarColor	
-  }
-  
-  
+body{
+  background-color: #92BB81FF; 
+}
+.new-manual-block{
+  border-radius:3px; 
+  background: #92BB81FF;  
+  width:100%;
+  padding: 50px 0px 75px 0px;
+  min-height: 900px;
+}
+
+
+.container-new-manual{
+    background:#fff;
+    border-radius: 10px;
+    box-shadow:15px 20px 0px rgba(0,0,0,0.1);
+}
+
+
+.new-manual-sec{
+    padding: 50px 30px; 
+    position:relative;
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid $navbarColor;
+    }
+    h2 {
+    margin-bottom:30px;
+    font-weight:800;
+    font-size: 30px;
+    color: #047000;
+    }
+    select:hover, textarea:hover, input:hover{
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    }
+    select:focus, textarea:focus, input:focus{
+      border: 2px solid $navbarColor  
+    }
+    .create-manual{
+      background: #047000;
+      color: white;
+      border: 1px solid #047000;
+      font-size: 18px;
+    }
+    .create-manual:hover{
+      background: white;
+      color: #047000;
+      border: 1px solid #047000;
+    }
+}
+
+
+.cloudinary-button {
+  margin-bottom: 10px !important; 
+  background: #047000 !important;
+  color: white !important;
+  border: 1px solid #047000 !important;
+}
+
+.cloudinary-button:hover{
+  background: white !important;
+  color: #047000 !important;
+  border: 1px solid #047000 !important;
+}
+
+.widget .button{
+  background: #047000 !important;
+}
+#cloudinary-navbar {
+  background: #047000 !important;
 }

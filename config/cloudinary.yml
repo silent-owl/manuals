@@ -1,0 +1,6 @@
+development:
+  cloud_name: "silent-owl"
+  api_key: "875215885494795"
+  api_secret: "TKapngaA-FOAectpS8sfDaSnSqQ"
+  secure: true
+  cdn_subdomain: true

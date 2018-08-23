@@ -20,10 +20,12 @@
 			<%= render @manuals %>	
             <%= render no_manuals_partial_path %>
 		</div>
-        <div class="infinite-scroll">
-            <%= will_paginate @manuals %>
-      </div>
 	</div>
+    <div class="row">
+         <div class="infinite-scroll">
+            <%= will_paginate @manuals %>
+        </div>
+    </div>
 </div>
 
 

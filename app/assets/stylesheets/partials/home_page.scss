@@ -1,7 +1,7 @@
 
 #main-content {
   background-color: #92BB81FF; 
-  padding: 20px 0 20px;
+  padding: 10px 0 10px;
   min-height: 400px;
   margin: 0;
 }
@@ -34,7 +34,11 @@
 }
 
 #side-menu {
-  padding: 0;
+  margin-top: 10px;
+  background-color: white;
+  padding: 5px;
+  border: 1px;
+  border-radius: 3%;
   #links-list {
     margin-top: 20px;
     padding: 0;
