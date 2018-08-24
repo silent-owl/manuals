@@ -15,10 +15,19 @@
     text-align: center;
   }
 
-.single-manual_img {
+.single-manual-img {
   /*border: 2px solid green;*/
   border-radius: 3%;
-  max-height: 600px;
+  max-height: 350px;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.single-step-img {
+  /*border: 2px solid green;*/
+  border-radius: 3%;
+  max-height: 500px;
 
   display: block;
   margin: 0 auto;

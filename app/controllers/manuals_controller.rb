@@ -1,5 +1,5 @@
 class ManualsController < ApplicationController
-  before_action :redirect_if_not_signed_in, only: [:new]
+  before_action :redirect_if_not_signed_in, only: [:new, :create, :edit, :update, :destroy]
   def new
     @categories = Category.all
     @manual = Manual.new
@@ -16,6 +16,30 @@ class ManualsController < ApplicationController
 
   def show
     @manual = Manual.find(params[:id])
+    @steps = @manual.steps.order("count").paginate(:per_page => 1, :page => params[:page])
+  end
+
+  def edit
+    @categories = Category.all
+    @manual = Manual.find(params[:id])
+    @step = Step.new
+    @steps = @manual.steps.order("count")
+  end
+
+  def update
+    @manual = Manual.find(params[:id])
+    if @manual.update(manual_params)
+      redirect_to @manual, :notice => "Manual is updated"
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @manual = Manual.find(params[:id]).destroy
+    if @manual.destroy
+      redirect_to root_path, :notice => "Manual is deleted"
+    end
   end
 
   def manual_params

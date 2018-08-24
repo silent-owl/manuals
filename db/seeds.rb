@@ -27,13 +27,13 @@ def seed_categories
 end
 
 def seed_manuals
-    20.times do
+    3.times do
       Manual.create(
         title: Faker::Lorem.sentences[0], 
         description: Faker::Lorem.sentences[0], 
-        user_id: rand(1..9),
+        user_id: "2",
         category_id: rand(1..8),
-        img_url: "https://pp.userapi.com/c849236/v849236504/4b7bb/IQIQwnnhuF0.jpg"
+        img_url: "https://res.cloudinary.com/silent-owl/image/upload/v1535026090/fbt5qkuq0fwbbhuuyb3m.jpg"
       )
     end
 end
@@ -41,4 +41,18 @@ end
 
 # seed_users
 # seed_categories
-seed_manuals
+# seed_manuals
+
+def seed_steps
+    5.times do
+      Step.create(
+        title: Faker::Lorem.sentences[0], 
+        description: Faker::Lorem.sentences[0], 
+        count: rand(1..9),
+        manual_id: "1",
+        img_url: "https://res.cloudinary.com/silent-owl/image/upload/v1533021941/samples/ecommerce/leather-bag-gray.jpg"
+      )
+    end
+end
+
+# seed_steps

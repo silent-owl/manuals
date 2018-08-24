@@ -2,8 +2,8 @@
   <div class=" container container-new-manual" style="margin-top: 4%;">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 new-manual-sec new-manual">
-			<h2 class="text-center">Create a new manual</h2>
-        <%= render 'manuals/new/manual_form' %>
+			<h2 class="text-center">Edit manual</h2>
+        <%= render 'manuals/edit/edit_manual_form' %>
       </div>
      </div>
     </div>
@@ -27,4 +27,3 @@
     search_by_rights: true },
     function(error, result) { $("#url_image").val(result[0].secure_url)  });
 </script>
-
