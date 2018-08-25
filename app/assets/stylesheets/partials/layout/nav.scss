@@ -49,9 +49,43 @@ body {
   }
   a:hover {
     background: white !important;
-    color: black !important;
+    color: $navbarColor !important;
     i {
-      color: black;
+      color: $navbarColor;
+    }
+  }
+}
+
+.mobile-menu-language {
+  #language-settings{
+    background: $navbarColor !important;
+    color: white !important;
+  }
+  i {
+    color: white;
+  }
+  ul {
+    padding: 0px;
+  }
+  a {
+    background: white !important;
+    color: $navbarColor !important;
+    display: block;
+    padding: 10px 0px 10px 25px !important;
+  }
+  a:hover {
+    background: #5DB15A !important;
+    color: white !important;
+    i {
+      color: $navbarColor;
+    }
+  }
+  a:active {
+    background: #5DB15A !important;
+    color: white !important;
+    border-bottom: solid 5px white;
+    i {
+      color: $navbarColor;
     }
   }
 }
@@ -69,8 +103,31 @@ body {
   background: $navbarColor !important;
   border: none;
 }
-
+.dropdown-menu{
+  .nav-item:active{
+    border-bottom: 5px solid white !important;
+  }
+}
 .dropdown-menu a:hover {
-  color: black !important;
+  color: $navbarColor !important;
   background: white !important;
 }
+
+
+.dropdown-language-menu a{
+  font-weight: 600 !important;
+  color: white !important;
+  background: #5DB15A !important;
+  .nav-item:active{
+    border-bottom: 5px solid #5DB15A !important;
+  }
+}
+
+.dropdown-language-menu a:hover {
+  font-weight: 600;
+  color: $navbarColor !important;
+  background: white !important;
+}
+
+
+

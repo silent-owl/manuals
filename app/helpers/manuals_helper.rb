@@ -1,9 +1,13 @@
 module ManualsHelper
   def manual_nav_panel_path
-      if ((current_user.role == "admin") || current_user.id == @manual.user.id)
+      if user_signed_in?
+        if ((current_user.role == "admin") || current_user.id == @manual.user.id)
         'manuals/show/nav_manual_panel/owner_admin_panel'
+        else
+          'manuals/show/nav_manual_panel/not_owner_admin_panel'
+        end   
       else
-        'manuals/show/nav_manual_panel/not_owner_admin_panel'
+        'manuals/show/nav_manual_panel/not_owner_admin_panel' 
       end
   end 
 

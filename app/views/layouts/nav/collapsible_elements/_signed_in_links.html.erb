@@ -1,4 +1,20 @@
 <li class="dropdown pc-menu">
+    <a id="language-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <span id="user-name">Language</span>
+      <span class="caret"></span>
+    </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="nav-item<%= "active" if I18n.locale == :ru %>">
+      <%= link_to "Рус", { locale: :ru }, class: "nav-link" %>
+   </li>
+   <li class="nav-item<%= "active" if I18n.locale == :en %>">
+    <%= link_to "Eng", { locale: :en }, class: "nav-link" %>
+   </li>
+  </ul>
+</li>
+
+
+<li class="dropdown pc-menu">
         <a id="user-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
           <span id="user-name"><%= current_user.name + " " + current_user.surname %></span>
           <span class="caret"></span>
@@ -11,7 +27,20 @@
   </ul>
 </li>
 
-
+<li class="dropdown mobile-menu mobile-menu-language">
+    <a id="language-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <span id="language-menu">Language</span>
+      <span class="caret"></span>
+    </a>
+  <ul class="dropdown-menu dropdown-language-menu" role="menu">
+    <li class="nav-item<%= "active" if I18n.locale == :ru %>">
+      <%= link_to "Рус", { locale: :ru }, class: "nav-link" %>
+   </li>
+   <li class="nav-item<%= "active" if I18n.locale == :en %>">
+    <%= link_to "Eng", { locale: :en }, class: "nav-link" %>
+   </li>
+  </ul>
+</li>
 <li class="mobile-menu">
   <%= link_to t('layouts.nav.collapsible_elements.signed_in_links.profile'), current_user %>
 </li>

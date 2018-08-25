@@ -6,4 +6,6 @@ ru:
           profile: 'Профиль'
         non_signed_in_links:
           login: 'Войти'
+          sign_up: 'Регистрация'
+          enter: 'Вход'
   

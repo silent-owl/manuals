@@ -37,4 +37,6 @@ en:
           profile: 'Profile'
         non_signed_in_links:
           login: 'Login'
+          sign_up: 'Sign up'
+          enter: 'Enter'
   
