@@ -21,11 +21,14 @@
     text-align: left;
   }
   .manual_title_a{
-    color: black;
-    font-weight: 450;
+    color: #047000;
+    font-weight: 600;
+  }
+  .manual_title_a:hover{
+    color: #5DB15A;
   }
   a{
-    color: green;
+    color: #047000;
     font-weight: 650;
   } 
   
@@ -54,7 +57,7 @@
 }
 .manual-show-img {
   padding-bottom: 5px;
-  max-height: 350px; 
+  max-height: 50s0px; 
   margin-bottom: 10px;
 }
 .step-img {

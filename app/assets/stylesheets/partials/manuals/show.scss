@@ -1,13 +1,32 @@
 .single-manual-content {
-  /*background-color: white;*/
-  height: calc(100vh - 50px);
+  
+  h3{
+    color: #047000;
+  }
 }
-.posted-by {
-    font-size: 12px;
-    font-size: 1.2rem;
-    margin: 20px 0;
-    color: rgba(0,0,0,0.5);
-  } 
+.nav-manual-panel{
+  border: 1px solid #047000;
+  border-radius: 40px;
+}
+.owner-buttons{
+  margin: 15px 0; 
+  font-size: 25px;
+}
+.back-button{
+  margin: 15px 0; 
+  font-size: 25px; 
+}
+.link-button{
+  margin: 15px 0; 
+  font-size: 25px;
+  color: #047000;
+}
+.link-button:active{
+  color: #047000
+}
+.hr-color{
+  border-color: #047000;
+}
 .single-manual-content p {
     margin: 50px 0;
   }
@@ -16,19 +35,60 @@
   }
 
 .single-manual-img {
-  /*border: 2px solid green;*/
+ 
   border-radius: 3%;
-  max-height: 350px;
+  max-height: 400px;
 
   display: block;
   margin: 0 auto;
 }
 
 .single-step-img {
-  /*border: 2px solid green;*/
   border-radius: 3%;
   max-height: 500px;
 
   display: block;
   margin: 0 auto;
 }
+.menu-step{
+  color: black;
+}
+.menu-step:active{
+  color: black;
+}
+.menu-step:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.show-manual-block{
+  border-radius:3px; 
+  background: #92BB81FF;  
+  width:100%;
+  padding: 10px 0px 50px 0px;
+  min-height: 900px;
+}
+
+
+.container-show-manual{
+    background:#fff;
+    border-radius: 10px;
+    box-shadow:15px 20px 0px rgba(0,0,0,0.1);
+}
+
+
+.show-manual-sec{
+    padding: 30px 30px; 
+    position:relative;
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid $navbarColor;
+    }
+    h2 {
+    margin-bottom:10px;
+    font-weight:800;
+    font-size: 30px;
+    color: #047000;
+    }
+}
+

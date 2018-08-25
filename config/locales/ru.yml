@@ -1,0 +1,9 @@
+ru:
+  layouts:
+    nav:
+      collapsible_elements:
+        signed_in_links:
+          profile: 'Профиль'
+        non_signed_in_links:
+          login: 'Войти'
+  

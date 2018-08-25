@@ -32,3 +32,38 @@ a:hover, a:active, a:link, a:visited {
 .control-label {
   display: none;
 }
+
+.apple_pagination {
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px;
+  cursor: default; 
+  font-size: 16px;
+  font-weight: 500;
+}
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em; 
+}
+.apple_pagination .disabled {
+    color: #5DB15A; 
+}
+.apple_pagination .current {
+    font-style: normal;
+    background-color: #047000;
+    color: white;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em; 
+}
+.apple_pagination a {
+    text-decoration: none;
+    color: #047000; 
+}
+.apple_pagination a:hover, .apple_pagination a:focus {
+  text-decoration: underline; 
+}

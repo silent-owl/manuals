@@ -1,0 +1,12 @@
+<div style="padding-top: 5px;">
+     <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 nav-manual-panel">
+        <div class="col-md-8 col-sm-8" >
+          <%= link_to "", root_path, :class=>'btn back-button far fa-caret-square-left f-icon-color' %>
+          <%= link_to (@manual.user.name + " " + @manual.user.surname ), user_path(@manual.user.id), :class=>'btn f-icon-color link-button' %>
+        </div>           
+        <div class="col-md-4 col-sm-4" style="align-content: right;" >
+          <%= link_to "", {action: :edit}, method: :get, :class=>'btn owner-buttons fas fa-edit f-icon-color' %>
+          <%= link_to "", {action: :destroy}, method: :delete, :class=>'btn owner-buttons fas fa-trash-alt f-icon-color' %> 
+        </div>
+    </div>
+</div>

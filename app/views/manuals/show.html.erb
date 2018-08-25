@@ -1,57 +1,45 @@
-<div id="single-manual-content" class="container single-manual-content">
-  <div class="row" style="background-color: white; padding-top: 5px;">
-    <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
-      <div class="col-md-8">
-        <div class="posted-by">Posted by <%= @manual.user.name %></div>
-      </div>
-      <div class="col-md-4">
-        <%= link_to "Delete", {action: :destroy}, method: :delete, :class=>'btn btn-danger' %>
-      </div>
-     </div>
-  </div>
-  <div class="row" style="background-color: white;">
-    <h2 style="color: #047000; font-size: 25px;" class="text-center"><%= @manual.title %></h2>
-  </div>
+<section class="show-manual-block">
+  <div class="container container-show-manual" style="margin-top: 2%;">
+    <div class="row">
+      <div class="col-md-12 show-manual-sec show-manual">
+        <div id="single-manual-content" class="single-manual-content" style="padding-left: 0px !important;">
+          <div class="row">
+            <%= render manual_nav_panel_path%>
+          </div>
+          <div class="row">
+             <div class="col-md-12 col-sm-12">
+              <h2 class="text-center" style="text-decoration: underline;"><%= @manual.title %></h2>
+            </div>  
+          </div>
+         
 
-  <div id="step-field">
-  <div class="row" style="background-color: white;" id="step-target" >
-    <%= render 'manuals/show/content' %>
-    <div class="col-md-8 col-sm-8"><%= render @steps %></div>
-  </div>
-  <div class="row" style="padding-top: 20px; background-color: white;">
-    <div class="col-md-10 col-md-offset-1 infinite-scroll">
-        <%= will_paginate @steps, :class => "anchor_step" %>
+          <div class="row" id="step-field">
+            <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                <div style="background-color: white;" id="step-target" >
+                  <%= render has_content_path %>
+                  <div class="col-md-9 col-sm-9"><%= render @steps %></div>
+                </div>  
+            </div>
+          </div>
+
+          <div class="row" id="main-field">
+            <div style="min-height: 800px;">
+              <div class="col-md-10 col-md-offset-1">
+                <h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;">About manual</h2>
+                <p><%= @manual.description*60 %></p>
+                <hr>
+                <div class="manual-show-img">
+                  <%= link_to image_tag @manual.img_url, class: 'img-responsive single-manual-img', :alt => "ManualImage" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
   </div>
-  </div>
+</section>
 
-  <div id="main-field">
-  <div class="row" style="min-height: 600px; background-color: white;">
-    <div class="col-md-10 col-md-offset-1">
-      <h3>Description</h3>
-      <hr>
-      <p><%= @manual.description*40 %></p>
-      <hr>
-      <div class="manual-show-img">
-        <%= link_to image_tag @manual.img_url, class: 'img-responsive single-manual-img', :alt => "ManualImage" %>
-      </div>
-    </div>
-  </div>
-  </div>
-  
-</div>
 
-<script type="text/javascript">
-  $(function(){
 
-    // $("#show_manual_info").click(function(){
-      
-    //   if ($("#main-field").css('display') == none){
-    //     $("#main-field").css('display','block');
-    //   }else{
-    //     $("#main-field").css("display", "none;");
-    //   }  
-    // });
-    
- });
-</script>

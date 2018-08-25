@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    nav:
+      collapsible_elements:
+        signed_in_links:
+          profile: 'Profile'
+        non_signed_in_links:
+          login: 'Login'
+  

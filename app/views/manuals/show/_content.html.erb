@@ -1,9 +1,11 @@
-<div class="col-md-4 col-sm-4">
-    <h3 style="text-align: left;">Content</h3>
-    <hr>
+<div class="col-md-3 col-sm-3">
+    <h3 class="far fa-list-alt" style="text-align: left;">  Steps Menu</h3>
     <p>
     <% @manual.steps.each_with_index do |step| %> 
-    	<h5 class="show_step"><a href="<%=@manual.id%>?page=<%=step.count%>"><%= step.count.to_s + ") " + step.title %></a></h5>
+    	<h5 class="show_step"> <a href="<%=@manual.id%>?page=<%=step.count%>" class="menu-step"><%= " " + step.count.to_s + ") " + step.title %></a></h5>
     <% end %> 
+    </p>
+    <p>
+        <h5 class='infinite-scroll apple_pagination' style="font-size: 14px; border: 1px solid #5DB15A;"><%= will_paginate @steps, :page_links => false, :previous_label => 'Previous Step', :next_label => 'Next Step', :class => "anchor_step" %></h5>
     </p>
 </div>

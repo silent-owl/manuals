@@ -2,9 +2,7 @@
   <div class="card single-manual-card" style="background-color: #fff;">
     <div class="card-block">
       <h4 class="manual-text">
-      <span><strong style="color: #047000;">How to: </strong></span>
-        <%=link_to truncate(manual.title , :length => 150),manual_path(manual.id), class: "manual_title_a" %>
-        <!-- <%= truncate(manual.title , :length => 150)%> -->
+      <span><%=link_to truncate(manual.title , :length => 150),manual_path(manual.id), class: "manual_title_a" %></span>
       </h4>
       <div class="manual-img">
         <%= link_to image_tag manual.img_url, class: 'img-responsive img_m', :alt => "ManualImage" %>
