@@ -30,13 +30,95 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  devise:
+    registrations:
+      new:
+        sign_up: 'Sign up'
+        name_placeholder: 'name (will be shown publicly)'
+        surname_placeholder: 'surname (will be shown publicly)'
+        email_placeholder: 'email (will be shown publicly)'
+        password_placeholder: 'password'
+        confirm_password_placeholder: 'password confirmation'
+        sign_up_button: 'Sign up'
+    sessions:
+      new:
+        log_in_now: 'Log in now'
+        email_placeholder: 'email'
+        password_placeholder: 'password'
+        log_in: "Log in"
   layouts:
     nav:
+      header:
+        sr_nav_info: 'Toggle navigation'
       collapsible_elements:
         signed_in_links:
           profile: 'Profile'
+          edit_profile: 'Edit profile'
+          log_out: 'Log out'
         non_signed_in_links:
           login: 'Login'
           sign_up: 'Sign up'
           enter: 'Enter'
+        language: 'Language'
+        russian: 'Russian'
+        english: 'English'
+  pages:
+    pagination_panel:
+      prev: 'Previous page'
+      next: 'Next page'
+    index:
+      create_new_manual:
+        not_signed_in:
+          please_login: 'To create a new post you should to Login'
+        signed_in:
+          add_manual: 'Add manual'
+      side_menu:
+          all: 'All categories'
+      search_form:
+        how_to: 'How to ...'
+  shared:
+    no_manuals:
+      has_not_manuals: 'Currently there are no published manuals'
+  manuals:
+    new:
+      create_manual: 'Create a new manual'
+      manual_form:
+        title_placeholder: 'Title'
+        description_placeholder: 'Describe your manual'
+        upload_image_button: 'Upload image'
+        create_button: 'Create a manual'
+        choose_category: 'Choose category:'
+    show:
+      content:
+        steps_menu: 'Steps'
+        prev_step: 'Previous Step'
+        next_step: 'Next Step'
+      about: 'About manual'
+    manual:
+      show_it: 'Show manual'
+    cloudinary:
+      powered_by_cloudinary: 'Powered by Cloudinary - Image management in the cloud'
+      sources_local_title: 'My files'
+      sources_image_search_title: 'Image Search'
+      sources_local_drop_file: 'Drop file here'
+      sources_local_drop_files: 'Drop files here'
+      sources_local_drop_or: 'Or'
+      sources_local_select_file: 'Select File'
+      sources_local_select_files: 'Select Files'
+      sources_url_title: 'Web Address'
+      sources_url_note: 'Public URL of an image file:'
+      sources_url_upload: 'Upload'
+      sources_url_error: 'Please type a valid HTTP URL.'
+      sources_camera_title: 'Camera'
+      sources_camera_note: 'Make sure your browser allows camera capture, move it to an object and click Capture.'
+      sources_camera_capture: 'Capture'
+      progress_uploading: 'Uploading...'
+      progress_upload_cropped: 'Upload'
+      progress_processing: 'Processing...'
+      progress_retry_upload: 'Try again'
+      progress_use_succeeded: 'OK'
+      progress_failed_note: 'Some of your images failed uploading.'
+  steps:
+    step:
+      step_title: 'Step № '
   

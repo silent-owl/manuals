@@ -36,4 +36,7 @@ module PagesHelper
     end
   end
 
+  def pagination_panel_partial_path
+    @manuals.empty? ? 'shared/empty_partial' : 'pages/pagination_panel'
+  end
 end

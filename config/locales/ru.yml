@@ -1,11 +1,100 @@
 ru:
+  devise:
+    registrations:
+      new:
+        sign_up: 'Регистрация'
+        name_placeholder: 'Имя (будет видно всем пользователям)'
+        surname_placeholder: 'Фамилия (будет видна всем пользователям)'
+        email_placeholder: 'Емейл (будет виден всем пользователям)'
+        password_placeholder: 'Пароль'
+        confirm_password_placeholder: 'Подтверджение пароля'
+        sign_up_button: 'Зарегестрироваться'
+    sessions:
+      new:
+        log_in_now: 'Вход'
+        email_placeholder: 'емейл'
+        password_placeholder: 'пароль'
+        log_in: 'Войти'
+    links:
+      log_in: 'Войти'
+      sign_up: 'Зарегестрироваться'
+      forgot_password: 'Забыли свой пароль?'
+      confirm_instructions: 'Не получили письмо подтверждения?'
+      unlock_instructions: 'Не получили письмо с инструкцией по разблокировке?'
   layouts:
     nav:
+      header:
+        sr_nav_info: 'Переключить навигацию'
       collapsible_elements:
         signed_in_links:
           profile: 'Профиль'
+          edit_profile: 'Редактировать профиль'
+          log_out: 'Выйти'
         non_signed_in_links:
           login: 'Войти'
           sign_up: 'Регистрация'
           enter: 'Вход'
+        language: 'Язык'
+        russian: 'Русский'
+        english: 'Английский'
+  pages:
+    pagination_panel:
+      prev: 'Предыдущая'
+      next: 'Следующая'
+    index:
+      create_new_manual:
+        not_signed_in:
+          please_login: 'Чтобы добавить инструкцию войдите в аккаунт'
+        signed_in:
+          add_manual: 'Создать инструкцию'
+      side_menu:
+          all: 'Все категории'
+      search_form:
+        how_to: 'Как ...'
+  shared:
+    no_manuals:
+      has_not_manuals: 'В данный момент такие инструкции отсутствуют'
+  manuals:
+    new:
+      create_manual: 'Создание новой инструкции'
+      manual_form:
+        title_placeholder: 'Заголовок'
+        description_placeholder: 'Описание'
+        upload_image_button: 'Загрузить фото'
+        create_button: 'Создать инструкцию'
+        choose_category: 'Выберите категорию:'
+    show:
+      content:
+        steps_menu: 'Шаги'
+        prev_step: 'Шаг назад'
+        next_step: 'Шаг вперед'
+      about: 'Об инструкции'
+    manual:
+      show_it: 'Научиться'
+    cloudinary:
+      powered_by_cloudinary: 'Работает на Cloudinary - Управление изображениями в облаке'
+      sources_local_title: 'Мои файлы'
+      sources_image_search_title: 'Поиск'
+      sources_local_drop_file: 'Перетащите файл сюда'
+      sources_local_drop_files: 'Перетащите файлы сюда'
+      sources_local_drop_or: 'Или'
+      sources_local_select_file: 'Выберите файл'
+      sources_local_select_files: 'Выберите файлы'
+      sources_url_title: 'Веб Адрес'
+      sources_url_note: 'Открытый URL-адрес файла изображения:'
+      sources_url_upload: 'Загрузить'
+      sources_url_error: 'Введите валидный HTTP URL-адрес'
+      sources_camera_title: 'Камера'
+      sources_camera_note: 'Убедитесь, что ваш браузер позволяет делать фото, направьте камеру на объект и нажмите Фото.'
+      sources_camera_capture: 'Фото'
+      progress_uploading: 'Загрузка...'
+      progress_upload_cropped: 'Загрузить'
+      progress_processing: 'Обработка...'
+      progress_retry_upload: 'Попробуйте ещё раз'
+      progress_use_succeeded: 'ОК'
+      progress_failed_note: 'Некоторые изображения не были загружены'
+  steps:
+    step: 
+      step_title: 'Шаг № '
+    
   

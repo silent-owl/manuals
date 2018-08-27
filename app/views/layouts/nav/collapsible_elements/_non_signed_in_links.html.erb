@@ -1,14 +1,14 @@
  <li class="dropdown pc-menu link_nav">
     <a id="language-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
-      <span id="language-name">Language</span>
+      <span id="language-name"><%=t('layouts.nav.collapsible_elements.language')%></span>
       <span class="caret"></span>
     </a>
   <ul class="dropdown-menu" role="menu">
     <li class="nav-item<%= "active" if I18n.locale == :ru %>">
-      <%= link_to "Рус", { locale: :ru }, class: "nav-link" %>
+      <%= link_to t('layouts.nav.collapsible_elements.russian'), { locale: :ru }, class: "nav-link" %>
    </li>
    <li class="nav-item<%= "active" if I18n.locale == :en %>">
-    <%= link_to "Eng", { locale: :en }, class: "nav-link" %>
+    <%= link_to t('layouts.nav.collapsible_elements.english'), { locale: :en }, class: "nav-link" %>
    </li>
   </ul>
 </li>
@@ -29,15 +29,15 @@
 
  <li class="dropdown mobile-menu mobile-menu-language">
     <a id="language-settings" class="dropdown-toggle" data-toggle="dropdown" href="#">
-      <span id="language-menu">Language</span>
+      <span id="language-menu"><%=t('layouts.nav.collapsible_elements.language')%></span>
       <span class="caret"></span>
     </a>
   <ul class="dropdown-menu dropdown-language-menu" role="menu">
     <li class="nav-item<%= "active" if I18n.locale == :ru %>">
-      <%= link_to "Рус", { locale: :ru }, class: "nav-link" %>
+      <%= link_to t('layouts.nav.collapsible_elements.russian'), { locale: :ru }, class: "nav-link" %>
    </li>
    <li class="nav-item<%= "active" if I18n.locale == :en %>">
-    <%= link_to "Eng", { locale: :en }, class: "nav-link" %>
+    <%= link_to t('layouts.nav.collapsible_elements.english'), { locale: :en }, class: "nav-link" %>
    </li>
   </ul>
 </li>

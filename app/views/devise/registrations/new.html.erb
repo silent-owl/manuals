@@ -1,36 +1,36 @@
 <section class="login-block">
   <div class="container container-log" style="margin-top: 4%;" id="sign-up-form">
-  <div class="row">
-    <div class="logic-sec col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-      <h2 class="text-center h2_reg">Sign up <small>it's free!</small></h2> 
+    <div class="row">
+      <div class="logic-sec col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        <h2 class="text-center h2_reg"><%= t("devise.registrations.new.sign_up") %></h2> 
 
-        <%= bootstrap_form_for(resource, 
-                       :as => resource_name, 
-                       :url => registration_path(resource_name)) do |f| %>
+          <%= bootstrap_form_for(resource, 
+                         :as => resource_name, 
+                         :url => registration_path(resource_name)) do |f| %>
 
-            <%= f.text_field :name, 
-                       placeholder: 'name (will be shown publicly)', 
-                       class: 'form-control login_input' %>
-            <%= f.text_field :surname, 
-                       placeholder: 'surname (will be shown publicly)', 
-                       class: 'form-control login_input' %>
-            <%= f.text_field :email, 
-                       placeholder: 'email', 
-                       class: 'form-control login_input' %>
-            <%= f.password_field :password, 
-                                 placeholder: 'password', 
-                                 class: 'form-control login_input' %>
-            <%= f.password_field :password_confirmation, 
-                                 placeholder: 'password confirmation', 
-                                 class: 'form-control login_input' %>
-            <%= f.submit 'Sign up', class: 'form-control btn-login' %>
-      <% end %>
-      <div class="devise_links_reg">
-          <%= render "devise/shared/links" %> 
+              <%= f.text_field :name, 
+                         placeholder: t("devise.registrations.new.name_placeholder"), 
+                         class: 'form-control login_input' %>
+              <%= f.text_field :surname, 
+                         placeholder: t("devise.registrations.new.surname_placeholder"), 
+                         class: 'form-control login_input' %>
+              <%= f.text_field :email, 
+                         placeholder: t("devise.registrations.new.email_placeholder"), 
+                         class: 'form-control login_input' %>
+              <%= f.password_field :password, 
+                                   placeholder: t("devise.registrations.new.password_placeholder"), 
+                                   class: 'form-control login_input' %>
+              <%= f.password_field :password_confirmation, 
+                                   placeholder: t("devise.registrations.new.confirm_password_placeholder"), 
+                                   class: 'form-control login_input' %>
+              <%= f.submit t("devise.registrations.new.sign_up_button"), class: 'form-control btn-login' %>
+        <% end %>
+        <div class="devise_links_reg">
+            <h5 class="btn-login"><%= render "devise/shared/links" %></h5>
+        </div>
       </div>
     </div>
-  </div>
-</div>  
+  </div>  
 </section>
 
 

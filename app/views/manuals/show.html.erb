@@ -13,7 +13,7 @@
           </div>
          
 
-          <div class="row" id="step-field">
+           <div class="row" id="step-field">
             <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                 <div style="background-color: white;" id="step-target" >
                   <%= render has_content_path %>
@@ -21,11 +21,10 @@
                 </div>  
             </div>
           </div>
-
           <div class="row" id="main-field">
             <div style="min-height: 800px;">
               <div class="col-md-10 col-md-offset-1">
-                <h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;">About manual</h2>
+                <h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;"><%=t('manuals.show.about')%></h2>
                 <p><%= @manual.description*60 %></p>
                 <hr>
                 <div class="manual-show-img">
@@ -34,7 +33,6 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>

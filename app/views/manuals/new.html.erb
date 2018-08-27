@@ -2,7 +2,7 @@
   <div class=" container container-new-manual" style="margin-top: 4%;">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 new-manual-sec new-manual">
-			<h2 class="text-center">Create a new manual</h2>
+			<h2 class="text-center"><%=t('manuals.new.create_manual')%></h2>
         <%= render 'manuals/new/manual_form' %>
       </div>
      </div>
@@ -20,7 +20,32 @@
   	cloud_name: 'silent-owl',
   	multiple: false, 
   	theme: "white",
-  	upload_preset: 'uz33u2rx', 
+  	upload_preset: 'uz33u2rx',
+    button_caption: "<%= t('manuals.new.manual_form.upload_image_button') %>",
+    text: {
+      "powered_by_cloudinary": "<%= t('manuals.cloudinary.powered_by_cloudinary') %>",
+      "sources.local.title": "<%= t('manuals.cloudinary.sources_local_title') %>",
+      "sources.image_search.title": "<%= t('manuals.cloudinary.sources_image_search_title') %>",
+      "sources.local.drop_file": "<%= t('manuals.cloudinary.sources_local_drop_file') %>",
+      "sources.local.drop_files": "<%= t('manuals.cloudinary.sources_local_drop_files') %>",
+      "sources.local.drop_or": "<%= t('manuals.cloudinary.sources_local_drop_or') %>",
+      "sources.local.select_file": "<%= t('manuals.cloudinary.sources_local_select_file') %>",
+      "sources.local.select_files": "<%= t('manuals.cloudinary.sources_local_select_files') %>",
+      "sources.url.title": "<%= t('manuals.cloudinary.sources_url_title') %>",
+      "sources.url.note": "<%= t('manuals.cloudinary.sources_url_note') %>",
+      "sources.url.upload": "<%= t('manuals.cloudinary.sources_url_upload') %>",
+      "sources.url.error": "<%= t('manuals.cloudinary.sources_url_error') %>",
+      "sources.camera.title": "<%= t('manuals.cloudinary.sources_camera_title') %>",
+      "sources.camera.note": "<%= t('manuals.cloudinary.sources_camera_title') %>",
+      "sources.camera.capture": "<%= t('manuals.cloudinary.sources_camera_capture') %>",
+      "progress.uploading": "<%= t('manuals.cloudinary.progress_uploading') %>",
+      "progress.upload_cropped": "<%= t('manuals.cloudinary.progress_upload_cropped') %>",
+      "progress.processing": "<%= t('manuals.cloudinary.progress_processing') %>",
+      "progress.retry_upload": "<%= t('manuals.cloudinary.progress_retry_upload') %>",
+      "progress.use_succeeded": "<%= t('manuals.cloudinary.progress_use_succeeded') %>",
+      "progress.failed_note": "<%= t('manuals.cloudinary.progress_failed_note') %>"
+    },
+    client_allowed_formats: ['png','jpeg','gif'],
   	sources:['local','url','image_search'],
     google_api_key: 'AIzaSyCeDjhqgTdnYul6F_f3ytcsEahEjW7YbB4',
     search_by_sites: ["all", "cloudinary.com"],

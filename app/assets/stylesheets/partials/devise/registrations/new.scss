@@ -9,7 +9,14 @@
     	color: #00b300;	
 }
 .devise_links_reg{
-	padding-top: 30px;
+	text-align: center;
+	width: 50%;
+	padding-top: 25px;
+	margin-left: 25%;
+	font-size: 20px;
+	h5{
+	padding: 5px;
+	}
 }
 .devise_links_reg a{
 	color: #00b300;
@@ -17,3 +24,6 @@
 .devise_links_reg a:hover{
 	font-weight: 700;
 }
+
+
+

@@ -2,7 +2,7 @@
   <div class=" container container-log" style="margin-top: 4%;">
     <div class="row">
       <div class="col-md-4 login-sec">
-        <h2 class="text-center">Log in now</h2>
+        <h2 class="text-center"><%= t("devise.sessions.new.log_in_now") %></h2>
           <%= bootstrap_form_for(resource, 
                          as: resource_name, 
                          url: session_path(resource_name)) do |f| %>
@@ -10,23 +10,22 @@
               <%= f.email_field :email, 
                                 autofocus: true, 
                                 class: 'form-control login_input', 
-                                placeholder: 'email' %>
+                                placeholder: t("devise.sessions.new.email_placeholder") %>
 
               <%= f.password_field  :password, 
                                     autocomplete: "off", 
                                     class: 'form-control login_input',
-                                    placeholder: 'password' %>
-
+                                    placeholder: t("devise.sessions.new.password_placeholder") %>
 
             <% if devise_mapping.rememberable? -%>
                <%= f.check_box :remember_me %>
             <% end %>
-            <%= f.submit "Log in", class: 'form-control btn-login' %>
+            <%= f.submit  t("devise.sessions.new.log_in"), class: 'form-control btn-login' %>
         <% end %>
         <div class="row text-center">
-          <%= link_to "", user_vkontakte_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-vk' %>
-          <%= link_to "", user_facebook_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-facebook-f' %>
-          <%= link_to "", "#", :class=>'btn btn-lg btn-grey fab fa-twitter' %>
+          <%= link_to "", user_vkontakte_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-vk f-icon-color' %>
+          <%= link_to "", user_facebook_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-facebook-f f-icon-color' %>
+          <%= link_to "", "#", :class=>'btn btn-lg btn-grey fab fa-twitter f-icon-color' %>
         </div>
         <div class="devise_links">
           <%= render "devise/shared/links" %> 

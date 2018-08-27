@@ -7,7 +7,7 @@
       <div class="manual-img">
         <%= link_to image_tag manual.img_url, class: 'img-responsive img_m', :alt => "ManualImage" %>
       </div>
-      <%= link_to "Show manual", manual_path(manual.id), class: 'show_it_link' %>
+      <%= link_to t('manuals.manual.show_it'), manual_path(manual.id), class: 'show_it_link' %>
     </div>
   </div>
 </div>

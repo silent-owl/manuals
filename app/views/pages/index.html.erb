@@ -21,11 +21,7 @@
             <%= render no_manuals_partial_path %>
 		</div>
 	</div>
-    <div class="row">
-         <div class="infinite-scroll apple_pagination" style="margin-bottom: 10px;">
-            <%= will_paginate @manuals %>
-        </div>
-    </div>
+    <%= render pagination_panel_partial_path %>
 </div>
 
 
