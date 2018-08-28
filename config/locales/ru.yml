@@ -43,10 +43,7 @@ ru:
       next: 'Следующая'
     index:
       create_new_manual:
-        not_signed_in:
-          please_login: 'Чтобы добавить инструкцию войдите в аккаунт'
-        signed_in:
-          add_manual: 'Создать инструкцию'
+        add_manual: 'Создать инструкцию'
       side_menu:
           all: 'Все категории'
       search_form:

@@ -68,9 +68,6 @@ en:
       next: 'Next page'
     index:
       create_new_manual:
-        not_signed_in:
-          please_login: 'To create a new post you should to Login'
-        signed_in:
           add_manual: 'Add manual'
       side_menu:
           all: 'All categories'
