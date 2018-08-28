@@ -25,6 +25,7 @@ gem 'omniauth-vkontakte'
 gem 'omniauth-facebook'
 gem 'cloudinary'
 gem 'russian'
+gem 'cancancan', '~> 2.0'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

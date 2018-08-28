@@ -1,5 +1,10 @@
 class ManualsController < ApplicationController
   before_action :redirect_if_not_signed_in, only: [:new, :create, :edit, :update, :destroy]
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to manual_path, :alert => exception.message
+  end
+  
   def new
     @categories = Category.all
     @manual = Manual.new
@@ -24,11 +29,12 @@ class ManualsController < ApplicationController
     @manual = Manual.find(params[:id])
     @step = Step.new
     @steps = @manual.steps.order("count")
+    authorize! :manage, @manual
   end
 
   def update
     @manual = Manual.find(params[:id])
-    if @manual.update(manual_params)
+    if @manual.update(manual_params_update)
       redirect_to @manual, :notice => "Manual is updated"
     else
       render 'edit'
@@ -42,8 +48,11 @@ class ManualsController < ApplicationController
     end
   end
 
-  def manual_params
+  private
+  def manual_params_update
     params.require(:manual).permit(:title, :img_url, :description, :category_id)
-                       .merge(user_id: current_user.id)
+  end
+  def manual_params
+    manual_params_update.merge(user_id: current_user.id)
   end
 end
