@@ -2,7 +2,7 @@ class ManualsController < ApplicationController
   before_action :redirect_if_not_signed_in, only: [:new, :create, :edit, :update, :destroy]
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, :alert => exception.message , :notice => exception.message
+    redirect_to root_path, flash: {success: exception.message} 
   end
   
   def new
@@ -14,7 +14,7 @@ class ManualsController < ApplicationController
   def create
     @manual = Manual.new(manual_params)
     if @manual.save 
-      redirect_to manual_path(@manual) 
+      redirect_to manual_path(@manual), flash: {success: "Successfully created"} 
     else
       redirect_to root_path
     end
@@ -37,7 +37,7 @@ class ManualsController < ApplicationController
   def update
     @manual = Manual.find(params[:id])
     if @manual.update(manual_params_update)
-      redirect_to @manual, :notice => "Manual is updated"
+      redirect_to @manual, :success => "Manual is updated"
     else
       render 'edit'
     end 
@@ -46,7 +46,7 @@ class ManualsController < ApplicationController
   def destroy
     @manual = Manual.find(params[:id]).destroy
     if @manual.destroy
-      redirect_to root_path, :notice => "Manual is deleted"
+      redirect_to root_path, :success => "Manual is deleted"
     end
   end
 
