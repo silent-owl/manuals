@@ -7,17 +7,20 @@ Rails.application.routes.draw do
     	get 'signup', to: 'devise/registrations#new'
     end
 
-    resources :users, :only => [:show, :index]
+    resources :users, :only => [:show, :index, :destroy, :update]
     delete 'users/delete_users', :as => :delete_users
     post 'users/ban_users', :as => :ban_users
     post 'users/default_users', :as => :default_users
     post 'users/admin_to_users', :as => :admin_to_users
-    
+    # post 'users/:id/admin_role', :as => :admin_role
+
     resources :manuals do
-    	collection do
-    		# get 'crafts'
-    	end
+       
+    	# collection do
+    	# 	# get 'crafts'
+    	# end
     end
+    resources :steps
   end
 end
 

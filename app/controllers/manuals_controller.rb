@@ -2,12 +2,13 @@ class ManualsController < ApplicationController
   before_action :redirect_if_not_signed_in, only: [:new, :create, :edit, :update, :destroy]
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to manual_path, :alert => exception.message
+    redirect_to root_path, :alert => exception.message , :notice => exception.message
   end
   
   def new
     @categories = Category.all
     @manual = Manual.new
+    authorize! :create, @manual
   end
 
   def create
@@ -20,8 +21,9 @@ class ManualsController < ApplicationController
   end
 
   def show
+    authorize! :read, @manual
     @manual = Manual.find(params[:id])
-    @steps = @manual.steps.order("count").paginate(:per_page => 1, :page => params[:page])
+    @steps = @manual.steps.order("id").paginate(:per_page => 1, :page => params[:page])
   end
 
   def edit
@@ -38,7 +40,7 @@ class ManualsController < ApplicationController
       redirect_to @manual, :notice => "Manual is updated"
     else
       render 'edit'
-    end
+    end 
   end
 
   def destroy

@@ -21,11 +21,6 @@ class StepsController < ApplicationController
       redirect_to manual_edit_path(@manual)
     end
   end
-  # def sort
-  #   params[:order].each do |key,value|
-  #     Step.find(value[:id]).update_attribute(:count, value[:count])
-  #   end
-  # end
 
   def step_params
     params.require(:step).permit(:title, :description, :img_url, :count, :manual_id)             

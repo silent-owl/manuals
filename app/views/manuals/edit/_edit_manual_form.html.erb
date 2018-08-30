@@ -13,7 +13,7 @@
                   maxlength: 2000,
                   placeholder: 'Describe your manual', 
                   class: 'form-control' %>
-  <%= f.text_field :img_url, 
+  <%= f.hidden_field :img_url, 
                   required: false, 
                   maxlength: 1000,
                   placeholder: 'Please include URL of main image', 
@@ -24,5 +24,3 @@
   <%= f.submit "Update a manual", class: 'form-control create-manual' %>
 <% end %>
 
-<!-- @post = Post.find(:id)
-@steps = @post.steps -->

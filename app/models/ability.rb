@@ -4,10 +4,23 @@ class Ability
   def initialize(user)
     can :read, :all
     if user.present?
-        can :manage, Manual, user_id: user.id
-        if (user.role == "admin")
-            can :manage, :all
+        if (user.role == "user")
+            can :create, Manual
+            can :manage, Manual do |m|
+                m.user == user
+            end
+            can :manage, User do |u|
+                u.id == user.id
+            end
         end
+        if (user.role == "admin")
+            can :create, Manual
+            can :manage, :all
+        end  
+        if (user.role == "banned")
+            cannot :create, Manual
+            cannot :read, :all
+        end   
     end
         
     #

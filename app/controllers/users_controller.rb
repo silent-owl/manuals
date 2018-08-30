@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    authorize! :read, @user
   end 
 
   def delete_users
@@ -11,6 +12,14 @@ class UsersController < ApplicationController
       User.where(id: params[:user_check]).destroy_all
     end 
     redirect_to users_url
+  end 
+
+  def destroy
+    authorize! :manage, @user
+    @user = User.find(params[:id]).destroy
+    if @user.destroy
+      redirect_to root_path, :notice => "User is deleted"
+    end
   end
 
   def ban_users

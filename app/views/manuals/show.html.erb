@@ -4,15 +4,13 @@
       <div class="col-md-12 show-manual-sec show-manual">
         <div id="single-manual-content" class="single-manual-content" style="padding-left: 0px !important;">
           <div class="row">
-            <%= render manual_nav_panel_path%>
+            <%= render 'manuals/show/manual_panel'%>
           </div>
           <div class="row">
              <div class="col-md-12 col-sm-12">
               <h2 class="text-center" style="text-decoration: underline;"><%= @manual.title %></h2>
             </div>  
           </div>
-         
-
            <div class="row" id="step-field">
             <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                 <div style="background-color: white;" id="step-target" >
