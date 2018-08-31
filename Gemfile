@@ -27,6 +27,7 @@ gem 'cloudinary'
 gem 'russian'
 gem 'cancancan'
 gem 'rails_admin', '~> 1.3'
+gem 'merit'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_merit
+
   has_many :manuals, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:vkontakte, :facebook]
