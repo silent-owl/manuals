@@ -118,4 +118,9 @@ ru:
       title: 'Заголовок'
       category: 'Категория'
       updated: 'Обновлено'
+      user_hasnot_manuals: 'Пользователь пока не имеет инструкции'
+      user_hasnot_achievements: 'У пользователя пока нет достижений'
+      icon: 'Иконка'
+      badge_name: 'Название'
+      badge_description: 'Описание'
   

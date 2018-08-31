@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><h4> <%= t("users.show.icon")%> </h4></th> 
+      <th scope="col"><h4> <%= t("users.show.badge_name")%> </h4></th>
+      <th scope="col"><h4> <%= t("users.show.badge_description")%> </h4></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.badges.each do |badge| %> 
+        <tr>
+            <td><img src="<%=badge.custom_fields.values[0]%>" alt="" style='height: 30px;'></strong></td>
+            <td><%= badge.name %></td>
+            <td><%= badge.description %></td>
+        </tr>
+    <% end %> 
+  </tbody>
+</table>

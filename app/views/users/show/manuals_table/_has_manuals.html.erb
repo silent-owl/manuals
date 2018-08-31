@@ -1,0 +1,29 @@
+<div class="row" style="margin-top: 2%;">
+  <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+    <% if (current_user == @user) %> 
+      <h3 class="text-center"><%= t("users.show.manuals")%><%= link_to t('users.show.add_manual'), new_manual_path(), class: "btn f-icon-color btn-login", style:"margin-left: 15px;" %></h3>    
+    <% else %>
+      <h3 class="text-center"> <%= t("users.show.manuals")%> </h3>
+    <% end %>
+   <table class="table">
+    <thead class="bg-success" style="border: 3px solid #dff0d8 !important;">
+      <tr class="profile-manual-header">
+        <th scope="col"><h4> № </h4></th>
+        <th scope="col"><h4> <%= t("users.show.category")%> </h4></th>
+        <th scope="col"><h4> <%= t("users.show.title")%> </h4></th>
+        <th scope="col"><h4> <%= t("users.show.updated")%> </h4></th>
+      </tr>
+    </thead>
+    <tbody style="border: 3px solid #dff0d8 !important;">
+      <% @user.manuals.each_with_index do |manual, index| %> 
+          <tr class="manual-row" onclick="window.location.href='<%= manual_path(manual.id) %>'">
+              <td><strong><%= index + 1 %></strong></td>
+              <td><%= manual.category.name %></td>
+              <td><%= manual.title %></td>
+              <td><%= manual.updated_at.strftime("%d.%m.%y, %H:%M") %></td>
+          </tr>
+      <% end %> 
+    </tbody>
+  </table>  
+  </div>
+</div>

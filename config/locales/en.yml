@@ -143,5 +143,13 @@ en:
       title: 'Title'
       category: 'Category'
       updated: 'Updated'
+      user_hasnot_manuals: 'User han`t manuals'
+      user_hasnot_achievements: 'User hasn`t achievements'
+      icon: 'Icon'
+      badge_name: 'Name'
+      badge_description: 'Description'
+
+
+
 
   

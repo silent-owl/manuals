@@ -1,0 +1,10 @@
+<div class="row" style="margin-top: 2%;">
+  <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+    <% if (current_user == @user) %> 
+      <h3 class="text-center"><%= t("users.show.manuals")%><%= link_to t('users.show.add_manual'), new_manual_path(), class: "btn f-icon-color btn-login", style:"margin-left: 15px;" %></h3>    
+    <% else %>
+      <h3 class="text-center"> <%= t("users.show.manuals")%> </h3>
+    <% end %>
+    <h4 class="text-center"> <%= t("users.show.user_hasnot_manuals")%> </h4> 
+  </div>
+</div>

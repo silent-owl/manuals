@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     authorize! :manage, @user
     @user = User.find(params[:id]).destroy
     if @user.destroy
-      redirect_to root_path, :notice => "User is deleted"
+      redirect_to root_path, :success => "User is deleted"
     end
   end
 end

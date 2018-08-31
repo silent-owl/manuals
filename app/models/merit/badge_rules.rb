@@ -21,6 +21,7 @@ module Merit
     include Merit::BadgeRulesMethods
 
     def initialize
+
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge
@@ -44,6 +45,19 @@ module Merit
       #
       #   user.name.length > 4
       # end
+
+      grant_on 'manuals#create', :badge => 'First manual', :temporary => true, :model_name => 'Manual' do |manual|
+        manual.user.manuals.count >= 1
+      end
+
+      grant_on 'manuals#create', :badge => 'Experienced assistant', :temporary => true, :model_name => 'Manual' do |manual|
+        manual.user.manuals.count >= 10
+      end
+
+      grant_on 'manuals#create', :badge => 'ManuALLman', :temporary => true, :model_name => 'Manual' do |manual|
+        manual.user.manuals.count >= 20
+      end
+      
     end
   end
 end
