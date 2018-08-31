@@ -1,6 +1,17 @@
 ru:
   devise:
     registrations:
+      edit:
+        update_profile: 'Редактирование профиля'
+        name_placeholder: 'Имя (будет видно всем пользователям)'
+        surname_placeholder: 'Фамилия (будет видна всем пользователям)'
+        email_placeholder: 'Емейл (будет виден всем пользователям)'
+        update_password_placeholder: 'Пароль (оставьте пустым, если не планируете менять)'
+        confirm_pass: 'Подтверджение пароля (оставьте пустым, если не планируете менять)'
+        current_pass: 'Нам нужен ваш пароль, чтобы подтвердить изменения'
+        update_button: 'Обновить'
+        cancel_account_button: 'Удалить мой аккаунт'
+        unhappy: 'Вы несчастливы?'
       new:
         sign_up: 'Регистрация'
         name_placeholder: 'Имя (будет видно всем пользователям)'
@@ -93,5 +104,18 @@ ru:
   steps:
     step: 
       step_title: 'Шаг № '
-    
+  users:
+    show:
+      profile: 'Профиль'
+      add_manual: 'Создать инструкцию'   
+      user_info: 'Данные пользователя'
+      achievements: 'Достижения'
+      name: 'Имя:'
+      surname: 'Фамилия:'
+      email: 'Емейл:'
+      role: 'Роль:'
+      manuals: 'Инструкции'
+      title: 'Заголовок'
+      category: 'Категория'
+      updated: 'Обновлено'
   

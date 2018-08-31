@@ -2,13 +2,13 @@
 <section class="profile-block">
   <div class="container container-profile" style="margin-top: 4%;">
     <div class="row">
-    	<h2 class="text-center"> Profile </h2>
+    	<h2 class="text-center"><%= t("users.show.profile")%></h2>
     	<div class="col-md-6 profile-sec" id="profile-info">
-    		<h3 class="text-center"> Info </h3>
+    		<h3 class="text-center"> <%= t("users.show.user_info")%> </h3>
     		<hr>
     		<div class="row">
     			<div class="col-md-6 col-sm-6 col-xs-4">
-    				<h4 class="h4-profile h4-profile-field"> Name: </h4>
+    				<h4 class="h4-profile h4-profile-field"> <%= t("users.show.name")%> </h4>
     			</div>
 	    		<div class="col-md-6 col-sm-6 col-xs-8">
 	    			<h4 class="h4-profile"> <%= @user.name %> </h4>
@@ -16,7 +16,7 @@
     		</div>
     		<div class="row">
     			<div class="col-md-6 col-sm-6 col-xs-4">
-    				<h4 class="h4-profile h4-profile-field"> Surname: </h4>	
+    				<h4 class="h4-profile h4-profile-field"> <%= t("users.show.surname")%> </h4>	
     			</div>
 	    		<div class="col-md-6 col-sm-6 col-xs-8">
 	    			<h4 class="h4-profile"> <%= @user.surname %> </h4>
@@ -24,7 +24,7 @@
     		</div>
     		<div class="row">
     			<div class="col-md-6 col-sm-6 col-xs-4">
-    				<h4 class="h4-profile h4-profile-field"> Email: </h4>	
+    				<h4 class="h4-profile h4-profile-field"> <%= t("users.show.email")%> </h4>	
     			</div>
 	    		<div class="col-md-6 col-sm-6 col-xs-8">
 	    			<h4 class="h4_profile"> <%= @user.email %> </h4>
@@ -32,7 +32,7 @@
     		</div>
     		<div class="row">
     			<div class="col-md-6 col-sm-6 col-xs-4">
-    				<h4 class="h4-profile h4-profile-field"> Role: </h4>	
+    				<h4 class="h4-profile h4-profile-field"> <%= t("users.show.role")%> </h4>	
     			</div>
 	    		<div class="col-md-6 col-sm-6 col-xs-8">
 	    			<h4 class="h4-profile"> <%= @user.role %> </h4>
@@ -40,50 +40,43 @@
     		</div>
     	</div>
     	<div class="col-md-6 profile-sec">
-    		<h3 class="text-center"> Achievements </h3>
+    		<h3 class="text-center"> <%= t("users.show.achievements")%> </h3>
     		<hr>
     	</div>
 			
      </div>
-     <% if ((can? :manage, @manual) || (current_user == @user)) %> 
+     <% if ((current_user == @user)) %> 
      <div class="row" style="height: 60px; border-bottom: 2px solid #047000; padding: 11px;">
-         <div class="col-lg-6"> 
-            <%= link_to t('pages.index.create_new_manual.add_manual'), new_manual_path(), class: "btn f-icon-color btn-login" %>
-         </div>
-         <div class="col-lg-6"> 
-            <%= link_to "Delete user", {action: :destroy}, method: :delete, :class=>'btn f-icon-color btn-login' %> 
+         <div class="col-md-8 col-md-4"> 
+            <%= link_to t('users.show.add_manual'), new_manual_path(), class: "btn f-icon-color btn-login" %>
          </div>
      </div>
      <% end %>
      <div class="row" style="margin-top: 2%;">
-     	<h3 class="text-center"> Manuals </h3>
-     	<hr>
-     	<div class="col-sm-12 col-xs-12 col-md-12 text-center profile-manual-header">
-     		<div class="col-md-3 col-sm-3 col-xs-2">
-    			<h4> № </h4>
-    		</div>	
-    		<div class="col-md-6 col-sm-6 col-xs-6">
-    			<h4> Title </h4>
-    		</div>	
-    		<div class="col-md-3 col-sm-3 col-xs-4">
-    			<h4> Updated </h4>
-    		</div>	
-     	</div>
-     	<% @user.manuals.each_with_index do |manual, index| %> 
-	     	<div class="manual-row col-sm-12 col-xs-12 col-md-12 text-center" onclick="window.location.href='<%= manual_path(manual.id) %>'">
-	     		<div class="col-md-3 col-sm-3 col-xs-2">
-	    			<%= index + 1 %>
-	    		</div>	
-	    		<div class="col-md-6 col-sm-6 col-xs-6">
-	    			<%= manual.title %>
-	    		</div>	
-	    		<div class="col-md-3 col-sm-3 col-xs-4">
-	    			<%= manual.updated_at.strftime("%d.%m.%y, %H:%M") %>
-	    		</div>	
-	     	</div>
-     	<% end %> 
+        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          <h3 class="text-center"> <%= t("users.show.manuals")%> </h3>
+         <table class="table">
+          <thead class="bg-success" style="border: 3px solid #dff0d8 !important;">
+            <tr class="profile-manual-header">
+              <th scope="col"><h4> № </h4></th>
+              <th scope="col"><h4> <%= t("users.show.category")%> </h4></th>
+              <th scope="col"><h4> <%= t("users.show.title")%> </h4></th>
+              <th scope="col"><h4> <%= t("users.show.updated")%> </h4></th>
+            </tr>
+          </thead>
+          <tbody style="border: 3px solid #dff0d8 !important;">
+            <% @user.manuals.each_with_index do |manual, index| %> 
+                <tr class="manual-row" onclick="window.location.href='<%= manual_path(manual.id) %>'">
+                    <td><strong><%= index + 1 %></strong></td>
+                    <td><%= manual.category.name %></td>
+                    <td><%= manual.title %></td>
+                    <td><%= manual.updated_at.strftime("%d.%m.%y, %H:%M") %></td>
+                </tr>
+            <% end %> 
+          </tbody>
+        </table>  
+        </div>
      </div>
-     <hr>
   </div> 
 </section>
 

@@ -1,0 +1,44 @@
+<%= bootstrap_form_for(resource, 
+               :as => resource_name, 
+               :url => registration_path(resource_name),
+                html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <%= f.email_field :email, 
+               autocomplete: "email",
+               placeholder: t("devise.registrations.edit.email_placeholder"), 
+               class: 'login_input' %>
+    <%= f.text_field :name, 
+               autocomplete: "name",
+               placeholder: t("devise.registrations.edit.name_placeholder"), 
+               class: 'login_input' %>
+    <%= f.text_field :surname, 
+               autocomplete: "surname",
+               placeholder: t("devise.registrations.edit.surname_placeholder"), 
+               class: 'login_input' %>
+    <%= f.password_field :password, 
+                          autocomplete: "off",
+                         placeholder: t("devise.registrations.edit.update_password_placeholder"), 
+                         class: 'login_input' %>
+
+    <%= f.password_field :password_confirmation, 
+                          autocomplete: "off",
+                         placeholder: t("devise.registrations.edit.confirm_pass"), 
+                         class: 'login_input' %>
+    <%= f.password_field :current_password, 
+                          autocomplete: "off",
+                         placeholder: t("devise.registrations.edit.current_pass"), 
+                         class: 'login_input' %>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= f.submit t("devise.registrations.edit.update_button"), class: 'btn-login' %>  
+      </div> 
+    </div>                                        
+<% end %>
+
+<hr style="border-color: #047000;">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3 style="color: #047000; text-decoration: underline;"><%= t("devise.registrations.edit.unhappy") %></h3>
+    <%= button_to t("devise.registrations.edit.cancel_account_button"), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn-login' %>
+  </div>
+</div>

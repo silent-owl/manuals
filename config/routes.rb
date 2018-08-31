@@ -5,14 +5,9 @@ Rails.application.routes.draw do
     root to: 'pages#index'
     devise_scope :user do
     	get 'login', to: 'devise/sessions#new'
-    	get 'signup', to: 'devise/registrations#new'
+        get 'signup', to: 'devise/registrations#new'
     end
-    resources :users, :only => [:show, :index, :destroy, :update]
-    delete 'users/delete_users', :as => :delete_users
-    post 'users/ban_users', :as => :ban_users
-    post 'users/default_users', :as => :default_users
-    post 'users/admin_to_users', :as => :admin_to_users
-    # post 'users/:id/admin_role', :as => :admin_role
+    resources :users, :only => [:show, :destroy]
 
     resources :manuals do
        
