@@ -1,0 +1,11 @@
+<section class="new-manual-block">
+  <div class=" container container-new-manual" style="margin-top: 4%;">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual">
+			<h2 class="text-center"><%= t('steps.edit.edit_step') %><%= link_to t('steps.edit.delete_step'), manual_step_path(@step.id), method: :delete, :class => "btn btn-danger", style: 'margin-left: 10px;'%></h2>
+      <%= render "steps/edit/edit_step_form"%>
+      </div>
+     </div>
+    </div>
+</section>
+

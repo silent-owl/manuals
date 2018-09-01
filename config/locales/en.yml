@@ -96,6 +96,18 @@ en:
         upload_image_button: 'Upload image'
         create_button: 'Create a manual'
         choose_category: 'Choose category:'
+    edit:
+      edit_manual: 'Edit manual'
+      create_steps: 'Create Steps'
+      step_title_placeholder: 'Step title'
+      step_number_placeholder: 'Step number'
+      create_step_button: 'Create step'
+      step_title_header: 'Step Title'
+      step_updated_header: 'Updated'
+      title_placeholder: 'Manual Title'
+      description_placeholder: 'Describe your manual'
+      update_button: 'Update a manual'
+      choose_category: 'Choose category:'
     show:
       content:
         steps_menu: 'Steps'
@@ -129,6 +141,13 @@ en:
   steps:
     step:
       step_title: 'Step № '
+    edit:
+      edit_step: 'Edit step'
+      delete_step: 'delete step'
+      title_placeholder: 'Step title'
+      description_placeholder: 'Describe your step'
+      count_placeholder: 'Step number'
+      save_step_button: 'Save step'
   users:
     show:
       profile: 'Profile' 

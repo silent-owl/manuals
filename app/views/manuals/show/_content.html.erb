@@ -1,9 +1,9 @@
 <div class="col-md-3 col-sm-3">
     <h3 class="far fa-list-alt" style="text-align: left;"> <%=t('manuals.show.content.steps_menu')%></h3>
     <p>
-    <% @manual.steps.each_with_index do |step, index| %> 
+    <% @manual.steps.order(@manual.steps.count).each_with_index do |step, index| %> 
     	<h5 class="show_step"> 
-    		<a href="<%=@manual.id%>?page=<%=(index+1)%>" class="menu-step"><%= " " + (index + 1).to_s + ") " + step.title %></a>
+    		<a href="<%=@manual.id%>?page=<%=(index +1 )%>" class="menu-step"><%= " " + step.count.to_s + ") " + step.title %></a>
     	</h5>
     <% end %> 
     </p>

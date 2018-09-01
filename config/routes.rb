@@ -9,11 +9,9 @@ Rails.application.routes.draw do
     end
     resources :users, :only => [:show, :destroy]
 
+    resources :manuals, :only => [:show, :update, :edit, :destroy, :new]
     resources :manuals do
-       
-    	# collection do
-    	# 	# get 'crafts'
-    	# end
+      resources :steps, :only => [:create, :update, :edit, :destroy]
     end
     resources :steps
   end

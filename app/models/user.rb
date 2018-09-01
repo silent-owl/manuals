@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_merit
-
   has_many :manuals, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:vkontakte, :facebook]
@@ -11,7 +10,8 @@ class User < ApplicationRecord
     user.email = auth.info.first_name + auth.info.last_name + '@vk.com' 
     user.name = auth.info.first_name 
     user.surname = auth.info.last_name 
-    user.password = Devise.friendly_token[0,20] 
+    user.password = Devise.friendly_token[0,20]
+    # user.image_url = auth.info.photo_200 
     user.save 
     end 
   end 
@@ -23,6 +23,7 @@ class User < ApplicationRecord
     user.name = auth.info.name.split(' ')[0]
     user.surname = auth.info.name.split(' ').last
     user.password = Devise.friendly_token[0,20] 
+    # user.image_url = auth.info.image 
     user.save 
     end 
   end      

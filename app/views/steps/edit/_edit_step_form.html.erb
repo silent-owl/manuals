@@ -1,0 +1,30 @@
+<%= bootstrap_form_for(@step) do |f| %>
+  <%= f.text_field :title, 
+                    placeholder: t('steps.edit.title_placeholder'), 
+                    class: 'form-control',
+                    required: true, 
+                    minlength: 5,
+                    maxlength: 255 %>
+  <%= f.number_field :count, 
+                    placeholder: t('steps.edit.count_placeholder'), 
+                    class: 'form-control',
+                    required: true %>
+  <%= f.text_area :description,
+                  rows: 6,
+                  required: true, 
+                  minlength: 20,
+                  maxlength: 1000,
+                  placeholder: t('steps.edit.description_placeholder'), 
+                  class: 'form-control' %>
+  <div class="step-img">
+        <%= image_tag @step.img_url, class: "img-responsive", alt: "StepImage", style: "height: 60px;" %>
+      </div>
+  <%= f.hidden_field :img_url,
+                  required: false,
+                  rows: 1,
+                  class: 'form-control',
+                  placeholder: 'Please include URL of main image',
+                  id: 'url_image' %>
+  <%= link_to t('manuals.new.manual_form.upload_image_button'), "#", id: "upload-widget-opener" %>
+  <%= f.submit t('steps.edit.save_step_button'), class: 'form-control create-manual' %>
+<% end %>

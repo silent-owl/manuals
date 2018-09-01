@@ -2,34 +2,54 @@
   <div class=" container container-new-manual" style="margin-top: 4%;">
     <div class="row">
       <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual">
-			<h2 class="text-center">Edit manual</h2>
+			<h2 class="text-center"><%= t('manuals.edit.edit_manual') %></h2>
         <%= render 'manuals/edit/edit_manual_form' %>
       </div>
      </div>
      <div class="row">
-       <div class="col-md-8 col-md-offset-2 new-manual-sec new-manual">
-          <h2 class="text-center">Create Steps</h2>
-          <%= render 'manuals/edit/step_manual_form' %>
+       <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual">
+          <h2 class="text-center"><%= t('manuals.edit.create_steps') %></h2>
+          <div class="row">
+            <div class="col-md-12">
+              <%= form_for [@manual, @step] do |f| %>
+              <div class="field" style = "display:none">
+                <%= f.label :manual_id %>
+                <%= f.number_field :manual_id, :value => @manual.id %>
+              </div>
+              <div class="input-group"  style="width: 100%;">
+                <%= f.text_field :title, :class => "form-control", placeholder: t('manuals.edit.step_title_placeholder'), style: "margin-bottom: 10px;" %>
+                <%= f.number_field :count, :class => "form-control", placeholder: t('manuals.edit.step_number_placeholder'), style: "margin-bottom: 10px;" %>
+              </div>
+              <button type="submit" class="btn btn-success create-manual" style="margin-bottom: 10px;"><%= t('manuals.edit.create_step_button') %></button>
+            <% end %> 
+            </div> 
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12">
+                <table class="table" style="margin-top:0">
+                <thead class="bg-success" style="border: 3px solid #dff0d8 !important;">
+                  <tr>
+                    <th>№</th>
+                    <th><%= t('manuals.edit.step_title_header') %></th>
+                    <th><%= t('manuals.edit.step_updated_header') %></th>
+                  </tr>
+                </thead>
+                <tbody id="steps_list" style="border: 3px solid #dff0d8 !important;">
+                  <% @steps.each_with_index do |step, index| %>
+                    <tr class="manual-row" data-id = "<%= step.id %>" onclick="window.location.href='<%= edit_manual_step_path(id: step.id, manual_id: step.manual.id) %>'">
+                      <th scope="row" class="comments_image"><%= step.count %></th>
+                      <td><%= step.title %></td>
+                      <td><%= step.updated_at.strftime("%d.%m.%y, %H:%M") %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table> 
+            </div>
+        </div>
        </div>
      </div>
     </div>
 </section>
 
 
-<script src="//widget.cloudinary.com/global/all.js" type="text/javascript">	
-</script>
-<!-- <script>
-  cloudinary.setCloudName('silent-owl');
-</script> -->
-<script type="text/javascript">  
-  $('#upload-widget-opener').cloudinary_upload_widget({ 
-  	cloud_name: 'silent-owl',
-  	multiple: false, 
-  	theme: "white",
-  	upload_preset: 'uz33u2rx', 
-  	sources:['local','url','image_search'],
-    google_api_key: 'AIzaSyCeDjhqgTdnYul6F_f3ytcsEahEjW7YbB4',
-    search_by_sites: ["all", "cloudinary.com"],
-    search_by_rights: true },
-    function(error, result) { $("#url_image").val(result[0].secure_url)  });
-</script>

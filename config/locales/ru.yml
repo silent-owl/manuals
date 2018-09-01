@@ -71,6 +71,18 @@ ru:
         upload_image_button: 'Загрузить фото'
         create_button: 'Создать инструкцию'
         choose_category: 'Выберите категорию:'
+    edit:
+      edit_manual: 'Редактирование инструкции'
+      create_steps: 'Создание шагов'
+      step_title_placeholder: 'Заголовок шага'
+      step_number_placeholder: 'Номер шага'
+      create_step_button: 'Создать шаг'
+      step_title_header: 'Заголовок шага'
+      step_updated_header: 'Обновлено'
+      title_placeholder: 'Заголовок инструкции'
+      description_placeholder: 'Описание интрукции'
+      update_button: 'Обновить'
+      choose_category: 'Выбрать категорию:'
     show:
       content:
         steps_menu: 'Шаги'
@@ -104,6 +116,13 @@ ru:
   steps:
     step: 
       step_title: 'Шаг № '
+    edit:
+      edit_step: 'Редактирование шага'
+      delete_step: 'удалить шаг'
+      title_placeholder: 'Заголовок шага'
+      description_placeholder: 'Описание шага'
+      count_placeholder: 'Номер шага'
+      save_step_button: 'Сохранить шаг'
   users:
     show:
       profile: 'Профиль'

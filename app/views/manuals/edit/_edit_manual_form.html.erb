@@ -1,17 +1,16 @@
 <%= bootstrap_form_for(@manual) do |f| %>
   <%= f.text_field  :title,  
-                    placeholder: 'Title', 
+                    placeholder: t('manuals.edit.title_placeholder'), 
                     class: 'form-control',
                     required: true, 
                     minlength: 5,
                     maxlength: 255 %>
-  
   <%= f.text_area :description, 
                   rows: 10,
                   required: true, 
                   minlength: 20,
                   maxlength: 2000,
-                  placeholder: 'Describe your manual', 
+                  placeholder: t('manuals.edit.description_placeholder'), 
                   class: 'form-control' %>
   <%= f.hidden_field :img_url, 
                   required: false, 
@@ -19,8 +18,9 @@
                   placeholder: 'Please include URL of main image', 
                   class: 'form-control',
                   id: 'url_image' %>
-  <%= link_to "Upload multiple image", "#", id: "upload-widget-opener" %>         
+  <%= link_to t('manuals.new.manual_form.upload_image_button'), "#", id: "upload-widget-opener" %>  
+  <h4 style="color: #047000;"><%= t('manuals.edit.choose_category') %></h4>       
   <%= f.collection_select :category_id, @categories, :id, :name, class: 'form-control' %>
-  <%= f.submit "Update a manual", class: 'form-control create-manual' %>
+  <%= f.submit t('manuals.edit.update_button'), class: 'form-control create-manual' %>
 <% end %>
 
