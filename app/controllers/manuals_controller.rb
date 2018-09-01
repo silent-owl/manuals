@@ -4,7 +4,7 @@ class ManualsController < ApplicationController
   respond_to :js, :json, :html
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, flash: {success: exception.message} 
+    redirect_to root_path, flash: {error: t('manuals_controller.flash.exeption_can_can')} 
   end
   
   def new
@@ -17,10 +17,10 @@ class ManualsController < ApplicationController
     @manual = Manual.new(manual_params)
     respond_to do |format|
       if @manual.save 
-        format.html { redirect_to @manual, flash: {success: "Successfully created"} }
+        format.html { redirect_to @manual, flash: {success: t('manuals_controller.flash.manual_is_created')} }
         format.json { render :show, status: :created, location: @manual }
       else
-        format.html { render :edit }
+        format.html { redirect_to @manual, flash: {error: t('manuals_controller.flash.manual_is_not_created')}  }
         format.json { render json: @manual.errors, status: :unprocessable_entity }
       end
     end
@@ -53,10 +53,10 @@ class ManualsController < ApplicationController
   def update
     respond_to do |format|
       if @manual.update(manual_params_update)
-        format.html { redirect_to @manual, flash: {success: "Manual is updated"}}
+        format.html { redirect_to @manual, flash: {success: t('manuals_controller.flash.manual_is_updated')}}
         format.json { render :show, status: :ok, location: @manual }
       else
-        format.html { render :edit }
+        format.html { redirect_to @manual, flash: {erorr: t('manuals_controller.flash.manual_is_not_updated')} }
         format.json { render json: @manual.errors, status: :unprocessable_entity }
       end
     end
@@ -66,7 +66,7 @@ class ManualsController < ApplicationController
     @manual.destroy
     if @manual.destroy
       respond_to do |format|
-        format.html { redirect_to root_path, flash: {success: "Manual is deleted"} }
+        format.html { redirect_to root_path, flash: {success: t('manuals_controller.flash.manual_is_deleted')} }
         format.json { head :no_content }
       end
     end

@@ -30,6 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  manuals_controller:
+    flash:
+      exeption_can_can: 'You don`t have access to manage this manual'
+      manual_is_created: 'Manual is created successfully'
+      manual_is_not_created: 'Manual is not created'
+      manual_is_updated: 'Manual is updated successfully'
+      manual_is_not_updated: 'Manual is not updated'
+      manual_is_deleted: 'Manual is deleted successfully'
+  steps_controller:
+    flash:
+      exeption_can_can: 'You don`t have access to manage steps from foreign manual'
+      step_is_created: 'Step is created successfully'
+      step_is_not_created: 'Step is not created'
+      step_is_updated: 'Step is updated successfully'
+      step_is_not_updated: 'Step is not updated'
+      step_is_deleted: 'Step is deleted successfully'
+  users_controller:
+    flash:
+      account_is_deleted: 'Account is deleted'
   devise:
     registrations:
       edit:

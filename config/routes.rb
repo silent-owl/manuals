@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => {registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks"}
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
     root to: 'pages#index'
     devise_scope :user do
     	get 'login', to: 'devise/sessions#new'

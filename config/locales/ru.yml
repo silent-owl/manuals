@@ -1,4 +1,23 @@
 ru:
+  manuals_controller:
+    flash:
+      exeption_can_can: 'У вас нет доступа для управления этой инструкцией'
+      manual_is_created: 'Инструкция создана успешно'
+      manual_is_not_created: 'Инструкция не создана'
+      manual_is_updated: 'Инструкция обновлена успешно'
+      manual_is_not_updated: 'Инструкция не обновлена'
+      manual_is_deleted: 'Инструкция удалена успешно'
+  steps_controller:
+    flash:
+      exeption_can_can: 'У вас нет доступа редактировать шаги не принадлежащей вам инструкции'
+      step_is_created: 'Шаг создан успешно'
+      step_is_not_created: 'Шаг не создан'
+      step_is_updated: 'Обновление шага прошло успешно'
+      step_is_not_updated: 'Шаг не обновлен'
+      step_is_deleted: 'Удаление шага прошло успешно'
+  users_controller:
+    flash:
+      account_is_deleted: 'Аккаунт удален'
   devise:
     registrations:
       edit:
@@ -142,4 +161,10 @@ ru:
       icon: 'Иконка'
       badge_name: 'Название'
       badge_description: 'Описание'
+  admin:
+    misc:
+      ago: 'назад'
+    actions:
+      dashboard:
+        title: 'Управление сайтом'
   

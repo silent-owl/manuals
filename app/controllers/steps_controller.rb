@@ -4,7 +4,7 @@ class StepsController < ApplicationController
   respond_to :js, :json, :html
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, flash: {success: exception.message} 
+    redirect_to root_path, flash: {error: t('steps_controller.flash.exeption_can_can')} 
   end
   
   def edit
@@ -19,10 +19,10 @@ class StepsController < ApplicationController
     @step.description = ""
     respond_to do |format|
       if @step.save
-        format.html { redirect_to edit_manual_path(@manual.id), flash: {success: 'Step was successfully created.'}}
+        format.html { redirect_to edit_manual_path(@manual.id), flash: {success: t('steps_controller.flash.step_is_created')}}
         format.json { render :show, status: :created, location: @step }
       else
-        format.html { redirect_to edit_manual_path(@manual.id), flash: {success: 'Step was not created.'}}
+        format.html { redirect_to edit_manual_path(@manual.id), flash: {error: t('steps_controller.flash.step_is_not_created')}}
         format.json { render json: @step.errors, status: :unprocessable_entity }
       end
     end
@@ -31,7 +31,7 @@ class StepsController < ApplicationController
   def destroy
     @step.destroy  
     respond_to do |format|
-      format.html { redirect_to edit_manual_path(@step.manual.id) }
+      format.html { redirect_to edit_manual_path(@step.manual.id), flash: {success: t('steps_controller.flash.step_is_deleted')} }
       format.json { head :no_content }
     end   
   end
@@ -39,10 +39,10 @@ class StepsController < ApplicationController
   def update
     respond_to do |format|
       if @step.update(step_params)
-        format.html { redirect_to edit_manual_path(@step.manual_id), flash: {success: 'Step was successfully updated.'} }
+        format.html { redirect_to edit_manual_path(@step.manual_id), flash: {success: t('steps_controller.flash.step_is_updated')} }
         format.json { render :show, status: :ok, location: @step }
       else
-        format.html { render :edit }
+        format.html { redirect_to edit_manual_path(@step.manual_id), flash: {success: t('steps_controller.flash.step_is_not_updated')}  }
         format.json { render json: @step.errors, status: :unprocessable_entity }
       end
     end
