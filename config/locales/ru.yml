@@ -1,4 +1,12 @@
 ru:
+  errors:
+    404_error:
+      main_text: 'Страница не найдена'
+    500_error:
+      main_text: 'Внутренняя ошибка сервера'
+  application_controller:
+    flash:
+      record_not_found: 'Такой записи не существует'
   manuals_controller:
     flash:
       exeption_can_can: 'У вас нет доступа для управления этой инструкцией'
@@ -51,6 +59,8 @@ ru:
       forgot_password: 'Забыли свой пароль?'
       confirm_instructions: 'Не получили письмо подтверждения?'
       unlock_instructions: 'Не получили письмо с инструкцией по разблокировке?'
+  index: 
+    banned: 'Вы забанены на этом сайте'
   layouts:
     nav:
       header:
@@ -60,6 +70,7 @@ ru:
           profile: 'Профиль'
           edit_profile: 'Редактировать профиль'
           log_out: 'Выйти'
+          admin_panel: 'Админ панель'
         non_signed_in_links:
           login: 'Войти'
           sign_up: 'Регистрация'

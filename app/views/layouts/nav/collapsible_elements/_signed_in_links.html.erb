@@ -25,6 +25,9 @@
     <% if current_user.provider == "" %> 
       <li><%= link_to t('layouts.nav.collapsible_elements.signed_in_links.edit_profile'), edit_user_registration_path %></li>
     <% end %>
+    <% if current_user.role == "admin" %> 
+      <li><%= link_to t('layouts.nav.collapsible_elements.signed_in_links.admin_panel'), rails_admin_path %></li>
+    <% end %>
     <li class="link_nav"><%= link_to t('layouts.nav.collapsible_elements.signed_in_links.log_out'), destroy_user_session_path, method: :delete %></li>
   </ul>
 </li>
@@ -50,6 +53,12 @@
  <% if (current_user.provider == "") %> 
    <li class="mobile-menu">
     <%= link_to t('layouts.nav.collapsible_elements.signed_in_links.edit_profile'), edit_user_registration_path %>
+  </li>
+<% end %>
+
+<% if (current_user.role == "admin") %> 
+   <li class="mobile-menu">
+    <%= link_to t('layouts.nav.collapsible_elements.signed_in_links.admin_panel'), rails_admin_path %>
   </li>
 <% end %>
 

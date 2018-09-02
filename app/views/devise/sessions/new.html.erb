@@ -1,5 +1,6 @@
+
 <section class="login-block">
-  <div class=" container container-log" style="margin-top: 4%;">
+  <div class="container container-log" style="margin-top: 4%;">
     <div class="row">
       <div class="col-md-4 login-sec">
         <h2 class="text-center"><%= t("devise.sessions.new.log_in_now") %></h2>
@@ -16,19 +17,15 @@
                                     autocomplete: "off", 
                                     class: 'form-control login_input',
                                     placeholder: t("devise.sessions.new.password_placeholder") %>
-
-            <% if devise_mapping.rememberable? -%>
-               <%= f.check_box :remember_me %>
-            <% end %>
             <%= f.submit  t("devise.sessions.new.log_in"), class: 'form-control btn-login' %>
         <% end %>
         <div class="row text-center">
           <%= link_to "", user_vkontakte_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-vk f-icon-color' %>
           <%= link_to "", user_facebook_omniauth_authorize_path, :class=>'btn btn-lg btn-grey fab fa-facebook-f f-icon-color' %>
-          <%= link_to "", "#", :class=>'btn btn-lg btn-grey fab fa-twitter f-icon-color' %>
+          <!-- <%= link_to "", "#", :class=>'btn btn-lg btn-grey fab fa-twitter f-icon-color' %> -->
         </div>
         <div class="devise_links">
-          <%= render "devise/shared/links" %> 
+          <h4><%= render "devise/shared/links" %></h4>
         </div>
       </div>
        <div class="col-md-8 banner-sec">
@@ -37,4 +34,6 @@
     </div> 
   </div>
 </section>
+
+
 

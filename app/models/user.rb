@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :manuals, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:vkontakte, :facebook]
+  
   def self.vkontakte_from_omniauth(auth) 
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user| 
     user.provider = auth.provider 
@@ -15,6 +16,7 @@ class User < ApplicationRecord
     user.save 
     end 
   end 
+
   def self.facebook_from_omniauth(auth) 
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user| 
     user.provider = auth.provider 
@@ -26,5 +28,5 @@ class User < ApplicationRecord
     # user.image_url = auth.info.image 
     user.save 
     end 
-  end      
+  end
 end

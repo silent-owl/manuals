@@ -1,4 +1,12 @@
 en:
+  errors:
+    404_error:
+      main_text: 'Page not found'
+    500_error:
+      main_text: 'Internal server error'
+  application_controller:
+    flash:
+      record_not_found: 'Record not found'
   manuals_controller:
     flash:
       exeption_can_can: 'You don`t have access to manage this manual'
@@ -45,6 +53,8 @@ en:
         email_placeholder: 'email'
         password_placeholder: 'password'
         log_in: "Log in"
+  index: 
+    banned: 'You are banned in this site'
   layouts:
     nav:
       header:
@@ -54,6 +64,7 @@ en:
           profile: 'Profile'
           edit_profile: 'Edit profile'
           log_out: 'Log out'
+          admin_panel: 'Admin panel'
         non_signed_in_links:
           login: 'Login'
           sign_up: 'Sign up'

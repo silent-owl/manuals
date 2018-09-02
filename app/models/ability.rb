@@ -25,6 +25,9 @@ class Ability
     if (user.role == "banned")
         cannot :create, Manual
         cannot :read, :all
+        can :manage, User do |u|
+            u.id == user.id
+        end
     end   
     if user.role == nil
 

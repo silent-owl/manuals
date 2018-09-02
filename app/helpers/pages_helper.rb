@@ -39,4 +39,16 @@ module PagesHelper
   def pagination_panel_partial_path
     @manuals.empty? ? 'shared/empty_partial' : 'pages/pagination_panel'
   end
+
+  def banned_alert_partial_path
+    if user_signed_in?
+      if current_user.role == "banned"
+        'pages/index/banned'
+      else
+        'shared/empty_partial'
+      end
+    else
+      'shared/empty_partial'
+    end
+  end
 end

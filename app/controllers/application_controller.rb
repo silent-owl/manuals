@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   
+  rescue_from ActiveRecord::RecordNotFound do
+    redirect_to root_path, flash: {error: t('application_controller.flash.record_not_found')}
+  end
+
   def redirect_if_not_signed_in
     redirect_to root_path if !user_signed_in?
   end
