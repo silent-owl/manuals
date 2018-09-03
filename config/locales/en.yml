@@ -107,6 +107,7 @@ en:
       description_placeholder: 'Describe your manual'
       update_button: 'Update a manual'
       choose_category: 'Choose category:'
+      back: ' Back'
     show:
       content:
         steps_menu: 'Steps'

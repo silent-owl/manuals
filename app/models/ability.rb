@@ -1,8 +1,8 @@
 class Ability
   include CanCan::Ability
+
   def initialize(user)
-    user ||= User.new 
-    
+    user ||= User.new     
     if (user.role == "user")
         can :read, :all
         can :create, Manual
@@ -32,6 +32,5 @@ class Ability
     if user.role == nil
 
     end
-
   end
 end

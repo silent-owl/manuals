@@ -4,10 +4,11 @@
       <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual">
 			<h2 class="text-center"><%= t('manuals.edit.edit_manual') %></h2>
         <%= render 'manuals/edit/edit_manual_form' %>
+        <%= link_to t('manuals.edit.back'), manual_path, :class=>'btn back-button far fa-caret-square-left f-icon-color',:style=>"font-size: 30px; font-family: default;" %>
       </div>
      </div>
      <div class="row">
-       <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual">
+       <div class="col-md-10 col-md-offset-1 new-manual-sec new-manual" style="margin-top: -60px;">
           <h2 class="text-center"><%= t('manuals.edit.create_steps') %></h2>
           <div class="row">
             <div class="col-md-12">

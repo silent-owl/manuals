@@ -113,6 +113,7 @@ ru:
       description_placeholder: 'Описание интрукции'
       update_button: 'Обновить'
       choose_category: 'Выбрать категорию:'
+      back: ' Назад'
     show:
       content:
         steps_menu: 'Шаги'
