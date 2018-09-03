@@ -119,6 +119,7 @@ ru:
         prev_step: 'Шаг назад'
         next_step: 'Шаг вперед'
       about: 'Об инструкции'
+      steps: 'Шаги'
     manual:
       show_it: 'Научиться'
     cloudinary:

@@ -22,15 +22,11 @@
           <div class="row" id="main-field">
             <div style="min-height: 800px;">
               <div class="col-md-10 col-md-offset-1">
-                <h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;"><%=t('manuals.show.about')%></h2>
-                <p><%= @manual.description*60 %></p>
-                <hr>
-                <div class="manual-show-img">
-                  <%= link_to image_tag @manual.img_url, class: 'img-responsive single-manual-img', :alt => "ManualImage" %>
-                </div>
+                <%= render "manuals/show/manual_info" %>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

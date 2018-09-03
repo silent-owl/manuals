@@ -34,12 +34,12 @@ class ManualsController < ApplicationController
       format.html 
       format.json { render json: @steps }
       format.js
-      # format.pdf do
-      #   render pdf: "#{@manual.title}",
-      #   template: "manuals/pdf.html.erb",
-      #   layout: 'pdf.html',
-      #   encoding: "utf8"
-      # end
+      format.pdf do
+        render pdf: "#{@manual.title}",
+        template: "manuals/pdf.html.erb",
+        layout: 'pdf.html',
+        encoding: "utf8"
+      end
     end
   end
 

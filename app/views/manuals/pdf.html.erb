@@ -1,0 +1,13 @@
+<h2 class="text-center" style="text-decoration: underline;"><%= @manual.title %></h2>
+<%= render "manuals/show/manual_info" %>
+<h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;"><%=t('manuals.show.steps')%></h2>
+ <% @manual.steps.each do |step| %>
+  	<h3><strong><%= t('steps.step.step_title')+ step.count.to_s  + ": " + step.title %></strong></h3>
+      	<div class='row'>
+      		<p><%= step.description %></p>
+       		<div class="step-img">
+	    	<%= image_tag step.img_url.gsub('https', 'http'), class: "img-responsive single-step-img", alt: "StepImage" %>
+	    	</div>
+		</div>
+ <% end %>
+

@@ -113,6 +113,7 @@ en:
         prev_step: 'Previous Step'
         next_step: 'Next Step'
       about: 'About manual'
+      steps: 'Steps'
     manual:
       show_it: 'Show manual'
     cloudinary:

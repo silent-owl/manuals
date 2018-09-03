@@ -28,6 +28,8 @@ gem 'russian'
 gem 'cancancan'
 gem 'rails_admin', '~> 1.3'
 gem 'merit'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

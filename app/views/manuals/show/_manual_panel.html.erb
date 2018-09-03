@@ -4,11 +4,14 @@
           <%= link_to "", root_path, :class=>'btn back-button far fa-caret-square-left f-icon-color' %>
           <%= link_to (@manual.user.name + " " + @manual.user.surname ), user_path(@manual.user.id), :class=>'btn f-icon-color link-button' %>
         </div>
-        <% if can? :update, @manual %>        
+              
         <div class="col-md-4 col-sm-4" style="align-content: right;" >
+          <% if can? :update, @manual %>  
           <%= link_to "", {action: :edit}, method: :get, :class=>'btn owner-buttons fas fa-edit f-icon-color' %>
           <%= link_to "", {action: :destroy}, method: :delete, :class=>'btn owner-buttons fas fa-trash-alt f-icon-color' %> 
+          <% end %>
+          <%= link_to "", manual_path(@manual, :format => :pdf), :class=> 'btn owner-buttons far fa-file-pdf f-icon-color' %>
         </div>
-        <% end %>
+        
     </div>
 </div>

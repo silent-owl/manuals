@@ -1,0 +1,6 @@
+<h2  style="border: 1px solid #047000; border-radius: 20px; text-align: center; padding: 5px;"><%=t('manuals.show.about')%></h2>
+<p><%= @manual.description %></p>
+<hr>
+<div class="manual-show-img">
+  <%= link_to image_tag @manual.img_url.gsub('https', 'http'), class: 'img-responsive single-manual-img', :alt => "ManualImage" %>
+</div>
