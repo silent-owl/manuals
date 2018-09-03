@@ -27,11 +27,11 @@ def seed_categories
 end
 
 def seed_manuals
-    3.times do
+    10.times do
       Manual.create(
         title: Faker::Lorem.sentences[0], 
         description: Faker::Lorem.sentences[0], 
-        user_id: "2",
+        user_id: "8",
         category_id: rand(1..8),
         img_url: "https://res.cloudinary.com/silent-owl/image/upload/v1535026090/fbt5qkuq0fwbbhuuyb3m.jpg"
       )
@@ -41,7 +41,7 @@ end
 
 # seed_users
 # seed_categories
-# seed_manuals
+seed_manuals
 
 def seed_steps
     5.times do

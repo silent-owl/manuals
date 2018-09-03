@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   private
     def manuals_for_category(category)
       @categories = Category.all
-      @manuals = get_manuals.order("created_at DESC").paginate(:per_page => 10, :page => params[:page])
+      @manuals = get_manuals.paginate(:per_page => 10, :page => params[:page])
       respond_to do |format|
         format.html
         format.js { render partial: 'pages/manuals_pagination_page' }
