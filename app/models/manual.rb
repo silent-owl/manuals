@@ -1,4 +1,5 @@
 class Manual < ApplicationRecord
+  include SearchCop
   belongs_to :user
   belongs_to :category
   has_many :steps, dependent: :destroy
@@ -11,7 +12,9 @@ class Manual < ApplicationRecord
       joins(:category).where(categories: {name: category_name}) 
   end
 
-  scope :search, -> (search) do
-     where("title ILIKE lower(?) OR description ILIKE lower(?)", "%#{search}%", "%#{search}%")
-  end
+  search_scope :search do
+      attributes :title, :description
+      attributes step: ['steps.description', 'steps.title']
+      options :all, :type => :fulltext
+    end
 end

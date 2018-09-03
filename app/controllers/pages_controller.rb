@@ -15,6 +15,7 @@ class PagesController < ApplicationController
     elsif category.present? && search.present?
       manuals = Manual.by_category(category).search(search)
     else
+      manuals = Manual.all
     end
   end
 
